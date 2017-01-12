@@ -8,14 +8,11 @@ export default function slideBlock() {
         trigger = $(self).find('.meta-top__trigger');
 
 //        BEGIN Clicker
-        $(trigger).on('click', function(e) {
-            e.stopPropagation();
-            var target = $(e.target);
-            
-            $(target).parent().parent().find('.section__block').slideToggle(500, function() {
-                $(target).toggleClass('up');
+        $(trigger).click(function() {
+            $(this).parent().parent().find('.section__block').slideToggle(500);
+            $(this).toggleClass('up');
+            return false;
             });
-        });
 //        END Clicker
     });
 }

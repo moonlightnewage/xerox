@@ -19,7 +19,6 @@ body
     width: 100%
     margin: 15px 0
     padding: 10px
-    overflow: hidden
     &.highlighted
         background-color: $bg-light
         border-color: $bg-light
@@ -31,9 +30,10 @@ body
             padding: 10px
             overflow: hidden
             cursor: pointer
+            transition: 0.5s
             &.up
-                transform: rotate(180deg)
-                background-position: -27px -127px
+                transform: rotateX(180deg)
+                background-position: -26px -127px
         .meta-top__heading
             display: inline-block
             margin-left: 15px

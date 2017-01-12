@@ -13,6 +13,5 @@ tabContent();
 slideBlock();
 createSpinner('.multiple-select');
 hover();
-selectNames(8);
-    
+selectNames(8); 
 });
