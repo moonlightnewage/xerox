@@ -824,7 +824,7 @@ body {
 .content .section__block .section__table[data-style="columns"] {
   background-color: #fff;
   width: 100%;
-  padding: 0 10px 10px 10px;
+  padding: 20px 10px 30px 10px;
 }
 
 .content .section__block .section__table[data-style="columns"] .table__head {

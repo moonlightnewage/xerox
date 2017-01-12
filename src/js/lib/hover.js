@@ -8,7 +8,6 @@ export default function hover() {
 
         
         additionalBlock = $(self).parent().find('.additional');
-//        $(additionalBlock).addClass('hidden');
         $(additionalBlock).hide();
         
         //        Adding icons

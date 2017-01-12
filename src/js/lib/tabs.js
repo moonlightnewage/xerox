@@ -14,10 +14,6 @@ export function tabContent () {
     $(iconLines).addClass('active');
     $(table).attr('data-style', 'rows');
     
-//    $(contentItem).on('click', function(e){
-//        e.stopPropagation();
-//        $(this).addClass('active').siblings().removeClass('active');
-//    });
     
     $(iconRect).on('click', function(e) {
         e.stopPropagation();
