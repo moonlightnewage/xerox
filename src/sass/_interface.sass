@@ -1,0 +1,73 @@
+// buttons
+%btn
+    font-family: $font-common
+    font-size: 11px
+    font-weight: 600
+    color: $dark-gray
+    border: 1px solid $border-gray
+    border-radius: 45px
+    padding: 2px 12px
+    background-color: #fff
+   
+// links
+%link
+    font-family: $font-bold
+    text-decoration: none
+    color: $dark-blue
+
+// labels
+%label
+    font-size: 12px
+    padding: 7px 15px
+
+// icons
+.icon
+    display: inline-block
+    background-image: url('../img/sprite.png')
+    background-repeat: no-repeat
+    overflow: hidden
+    text-align: center
+
+// selects
+.multiple-select__wrapper
+    display: inline-flex
+    position: relative
+    bottom: 10px
+    +clr
+    .multiple-select__placeholder
+        height: 30px
+        overflow: hidden
+        background-color: #fff
+        float: left
+        padding: 8px 15px 10px
+        font-family: $font-bold
+    .multiple-select__list
+        position: absolute
+        top: 35px
+        z-index: 9
+        width: 100%
+        background-color: #fff
+        padding: 10px 15px
+        border: 1px solid $border-gray
+        li
+            list-style: none
+            font-family: $font-regular
+            font-weight: 400
+            padding: 8px 0 10px
+            cursor: pointer
+    .multiple-select__switcher
+        height: 30px
+        float: left
+        overflow: hidden
+        .icon
+            display: block
+            width: 15px
+            height: 15px
+            background-color: #fff
+            cursor: pointer
+        .icon-arrow-up
+            background-position: -16px -127px
+        .icon-arrow-down
+            background-position: -33px -134px
+    .hidden
+        display: none

@@ -1,0 +1,112 @@
+//BEGIN -- General Styles
+html
+    height: 100%
+
+body
+    background: #fff
+    font-family: $font-common
+    font-size: 13px
+    font-weight: 600
+    color: $dark-gray
+    height: 100%
+    overflow-y: scroll
+//END -- General Styles
+
+// BEGIN -- Styles for each SECTION
+.section
+    background-color: #fff
+    border: 1px solid $border-gray
+    width: 100%
+    margin: 15px 0
+    padding: 10px
+    overflow: hidden
+    &.highlighted
+        background-color: $bg-light
+        border-color: $bg-light
+            
+    .section__meta-top
+        +clr
+        .meta-top__trigger
+            @extend %btn
+            padding: 10px
+            overflow: hidden
+            cursor: pointer
+            &.up
+                transform: rotate(180deg)
+                background-position: -27px -127px
+        .meta-top__heading
+            display: inline-block
+            margin-left: 15px
+            overflow: hidden
+            font-family: $font-bold
+            font-size: 15px
+        .meta-top__btn
+            @extend %btn
+            float: right
+            display: inline-block
+        .icon-arrow-down
+            background-position: -26px -128px
+            width: 7px
+            height: 4px
+    .section__block            
+        .section__nav
+            margin-top: 8px
+            +clr
+            .label
+                @extend %label
+    
+        .section__content
+            .data
+                background-color: $bg-very-light
+                padding: 20px 55px
+                margin-top: 8px
+                text-align: center
+                         
+// END -- Styles for each SECTION
+
+// BEGIN -- Styles for page wrapper
+.page-wrapper
+    flex: 1 0 auto
+    +clr
+    .page-header
+        margin: 25px 20px 10px
+        +clr
+        .page-header__info
+            float: left
+            .icon-folder-double
+                background-position: -47px 0px
+                width: 28px
+                height: 27px
+            .info__heading
+                display: inline-block
+                padding: 0 15px
+                .info__title
+                    font-family: $font-regular
+                    font-size: 20px
+                    font-weight: 300
+                    text-transform: uppercase
+        .page-header__btn
+            float: right
+            .btn
+                @extend %btn
+                padding: 5px
+                width: 34px
+                height: 34px
+            .icon-sliders
+                background-position: -18px -102px
+            .icon-star
+                background-position: -33px -44px
+
+    .page-main
+        width: width(1230, 730)
+        margin-left: 20px
+        margin-right: 10px
+        float: left
+
+    .page-aside
+        width: width(1230, 450)
+        margin-right: 20px
+        float: right
+// END -- Styles for page wrapper
+
+    

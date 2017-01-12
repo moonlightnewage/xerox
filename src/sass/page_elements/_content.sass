@@ -1,0 +1,185 @@
+.content
+    .section__block
+        
+        // BEGIN -- Content navigation
+        
+        .section__nav
+            +clr
+            .label
+                display: inline-block
+                overflow: hidden
+            .icons
+                float: right
+                background-color: #fff
+                padding: 5px 10px
+                .icon
+                    border: 1px solid #fff
+                    width: 28px
+                    height: 28px
+                    padding: 5px
+                    cursor: pointer
+                .icon-rect
+                    background-position: -26px -76px
+                    border: 1px solid #fff
+                    &:hover
+                        border: 1px solid $border-gray
+                        background-position: -112px -73px
+                    &.active
+                        border: 1px solid $border-gray
+                        background-position: -112px -73px
+                .icon-lines
+                    background-position: -137px -18px
+                    &:hover
+                        border: 1px solid $border-gray
+                        background-position: -137px 6px
+                    &.active
+                        border: 1px solid $border-gray
+                        background-position: -137px 6px
+                        
+        // END -- Content navigation
+            
+
+        // BEGIN -- Content table    
+                
+        .section__table
+            background-color: #fff
+            width: 100%
+            .table__head
+                position: relative
+                border-bottom: 1px solid $border-gray
+                margin: 0 10px
+                +clr
+                .table__col-left
+                    float: left
+                    .head__elem
+                        font-size: 10px
+                        margin-left: 40px
+                        padding: 5px 0
+                        .icon-arrow-down
+                            background-position: -33px -136px
+                            width: 7px
+                            height: 6px
+                            margin-left: 10px
+                            cursor: pointer
+                .table__col-right
+                    position: absolute
+                    left: 70%
+                    .head__elem
+                        display: inline-block
+                        font-size: 10px
+                        padding: 5px 0
+                    .owner
+                        position: absolute
+                        left: 0
+                    .edited
+                        position: absolute
+                        left: 90px
+                    .size
+                        position: absolute
+                        left: 180px
+            
+            .table__body
+                padding-bottom: 15px
+                .row__wrapper
+                    cursor: pointer
+                    &:last-of-type
+                        .row
+                            border-bottom: 1px solid #fff
+                    &:hover
+                        .row
+                            border-bottom: 1px solid #606568
+                            .table__col-left
+                                .cell
+                                    .title
+                                        color: #fff
+                                    .text
+                                        color: #fff
+                    &.highlighted
+                        background-color: $hover-gray
+                    .row
+                        position: relative
+                        border-bottom: 1px solid $border-gray
+                        padding: 10px 0
+                        margin: 0 10px
+                        +clr
+
+                        .table__col-left
+                            float: left
+                            .icon-folder-single
+                                background-position: -85px 0px
+                                width: 22px
+                                height: 20px
+                                margin-bottom: 10px
+                            .cell
+                                display: inline-block
+                                padding: 5px
+                                .title
+                                    @extend %link
+                                    font-size: 15px
+                                .text
+                                    font-size: 10px
+                                    color: $light-gray
+
+                        .table__col-right
+                            position: absolute
+                            left: 70%
+                            .cell
+                                display: inline-block
+                            .cell__owner
+                                @extend %link
+                                font-size: 13px
+                                position: absolute
+                                left: 0
+                            .cell__date
+                                font-family: $font-bold
+                                font-size: 13px
+                                font-weight: 600
+                                position: absolute
+                                left: 90px
+                            .cell__size
+                                font-family: $font-regular
+                                font-size: 13px
+                                font-weight: 400
+                                position: absolute
+                                left: 180px
+                        .additional
+                            position: absolute
+                            left: 67.1%
+                            top: 0
+                            width: 260px
+                            height: 60px
+                            background-color: $hover-gray
+                            .icon__wrapper
+                                width: 65px
+                                height: 62px
+                                padding: 15px
+                                display: inline-block
+                                cursor: pointer
+                                &:hover
+                                    background-color: $bg-dark
+                                .icon
+                                    margin: 10px
+                                    display: inline-block
+                                    overflow: hidden
+                                    margin-top: 6px
+                                .icon-bell
+                                    background-position: -57px -79px
+                                    width: 16px
+                                    height: 24px
+                                .icon-sliders
+                                    background-position: -52px -108px
+                                    width: 16px
+                                    height: 24px
+                                .icon-star
+                                    background-position: -5px -50px
+                                    width: 26px
+                                    height: 24px
+                                .icon-settings
+                                    background-position: -117px -24px
+                                    width: 16px
+                                    height: 24px
+                                    
+                        .hidden
+                            display: none
+                                
+            // END -- Content table  

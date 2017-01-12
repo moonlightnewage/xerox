@@ -1,0 +1,47 @@
+{% import "data/data.html" as items %}
+
+<header class="header">
+<!--Top block BEGIN-->
+<div class="header__top-block">
+<!--   Logo BEGIN-->
+    <a href="#" class="header__logo"><img src="img/header-logo.png" alt="Duracell"></a>
+<!--   Logo END-->
+   
+<!--Search form BEGIN-->
+    <form action="" class="search__form">
+        <div class="search">
+            <div class="search__input">
+                <input type="text" placeholder="Search"> 
+                <button class="icon icon-search search__btn"></button>
+                <button class="icon icon-arrow-down_large search__btn"></button>
+            </div>
+        </div>
+        <span class="icon icon-settings"></span>
+    </form>
+<!--Search form END-->
+
+<!--User block BEGIN-->
+    <div class="user">
+        <button class="user__logout">Log out</button>
+        <div class="user__login">emma.davidson@caterptillar.com</div>
+        <div class="icon user__icon"></div>
+    </div>
+<!--User block END-->
+</div>
+<!--Top block BEGIN-->
+
+<!--Top navigation BEGIN-->
+    <nav class="header__top-nav">
+        <ul>
+           {% for item in items.top_nav %}
+            <li class="top-nav__item">
+                <span class="icon icon-{{item.icon}}"></span>
+                <a href="#" class="top-nav__item-text">{{item.text}}</a>
+                {% if item.extra %}<span class="top-nav__item-extra">{{item.extra}}</span>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+<!--Top navigation END-->
+</header>
+
