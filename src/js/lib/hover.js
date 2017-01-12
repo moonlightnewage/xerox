@@ -4,10 +4,12 @@ export default function hover() {
     $(tableRows).each(function () {
         var self = $(this);
         $(self).wrap('<div class="row__wrapper"></div>');
-        $(self).append('<div class="additional"></div>');
+        $(self).parent().append('<div class="additional"></div>');
+
         
-        additionalBlock = $(self).find('.additional');
-        $(additionalBlock).addClass('hidden');
+        additionalBlock = $(self).parent().find('.additional');
+//        $(additionalBlock).addClass('hidden');
+        $(additionalBlock).hide();
         
         //        Adding icons
         $(additionalBlock).append('<span class="icon icon-bell"></div>');
@@ -22,12 +24,12 @@ export default function hover() {
         $(self).parent().on('mouseover', function (e) {
             e.stopPropagation();
             $(this).addClass('highlighted');
-            $(this).find('.additional').removeClass('hidden');
+            $(this).find('.additional').show();
         });
         $(self).parent().on('mouseout', function (e) {
             e.stopPropagation();
             $(this).removeClass('highlighted');
-            $(this).find('.additional').addClass('hidden');
+            $(this).find('.additional').hide();
         });
     });
-}
+} 
