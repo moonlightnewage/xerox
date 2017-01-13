@@ -25,6 +25,7 @@ export default function createSpinner(multipleSelectClass) {
         $(switcher).on('click', function (e) {
             e.stopPropagation();
             var target = $(e.target);
+            console.log($(target).parent().next().next());
             $(target).parent().next().next().fadeToggle(200);
         });
         $(list).children().on('click', function (e) {

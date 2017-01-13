@@ -5,7 +5,7 @@ html
 body
     background: #fff
     font-family: $font-common
-    font-size: 13px
+    font-size: em(13)
     font-weight: 600
     color: $dark-gray
     height: 100%
@@ -39,7 +39,7 @@ body
             margin-left: 15px
             overflow: hidden
             font-family: $font-bold
-            font-size: 15px
+            font-size: em(15, 13)
         .meta-top__btn
             @extend %btn
             float: right
@@ -52,8 +52,11 @@ body
         .section__nav
             margin-top: 8px
             +clr
-            .label
-                @extend %label
+            .nav__item
+                display: inline-block
+                height: 30px
+                .label
+                    @extend %label
     
         .section__content
             .data
@@ -82,7 +85,7 @@ body
                 padding: 0 15px
                 .info__title
                     font-family: $font-regular
-                    font-size: 20px
+                    font-size: em(20, 13)
                     font-weight: 300
                     text-transform: uppercase
         .page-header__btn

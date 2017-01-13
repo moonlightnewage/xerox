@@ -1,8 +1,3 @@
-//%block_inline
-//    display: inline-block
-//%border
-//    border: 1px solid #dcdee0
-
 .header
     
     .header__top-block
@@ -25,7 +20,7 @@
                     
                     input
                         font-family: $font-common
-                        font-size: 12px
+                        font-size: em(12, 13)
                         line-height: 28px
                         padding-left: 15px
                         width: 88%
@@ -70,7 +65,7 @@
                 cursor: pointer
             .user__login
                 float: right
-                font-size: 12px
+                font-size: em(12, 13)
                 margin: 10px
             .user__logout
                 @extend %btn
@@ -110,18 +105,19 @@
                 .top-nav__item-text
                     text-decoration: none
                     text-transform: uppercase
-                    font-size: 12px
+                    font-size: em(12, 13)
                     color: $dark-gray
                     padding: 0 5px
                     display: inline-block
                     overflow: hidden
                 .top-nav__item-extra
                     padding: 0 5px
+                    margin-bottom: 1px
                     background-color: #ff6c32
                     border: none
                     border-radius: 10px
                     font-family: $font-regular
-                    font-size: 10px
+                    font-size: em(10, 13)
                     font-weight: 400
                     color: #fff
                     display: inline-block
