@@ -25,7 +25,7 @@ body
             
     .section__meta-top
         +clr
-        .meta-top__trigger
+        .section__trigger
             @extend %btn
             padding: 10px
             overflow: hidden
@@ -34,32 +34,31 @@ body
             &.up
                 transform: rotateX(180deg)
                 background-position: -26px -127px
-        .meta-top__heading
+        .section__heading
             display: inline-block
             margin-left: 15px
             overflow: hidden
             font-family: $font-bold
             font-size: em(15, 13)
-        .meta-top__btn
+        .section__btn
             @extend %btn
             float: right
             display: inline-block
         .icon-arrow-down
+            +s(arrow-down-gray)
             background-position: -26px -128px
-            width: 7px
-            height: 4px
     .section__block            
         .section__nav
             margin-top: 8px
             +clr
-            .nav__item
+            .item
                 display: inline-block
                 height: 30px
                 .label
                     @extend %label
     
         .section__content
-            .data
+            .no-data
                 background-color: $bg-very-light
                 padding: 20px 55px
                 margin-top: 8px
@@ -77,9 +76,7 @@ body
         .page-header__info
             float: left
             .icon-folder-double
-                background-position: -47px 0px
-                width: 28px
-                height: 27px
+                +s(folder-double)
             .info__heading
                 display: inline-block
                 padding: 0 15px
@@ -92,22 +89,22 @@ body
             float: right
             .btn
                 @extend %btn
-                padding: 5px
-                width: 34px
-                height: 34px
+                padding: 15px
             .icon-sliders
-                background-position: -18px -102px
+                +s(sliders-gray)
+                background-position: -19px -103px
             .icon-star
-                background-position: -33px -44px
+                +s(star-gray)
+                background-position: -34px -45px
 
     .page-main
-        width: width(1230, 730)
+        width: percentage(730/1230)
         margin-left: 20px
         margin-right: 10px
         float: left
 
     .page-aside
-        width: width(1230, 450)
+        width: percentage(450/1230)
         margin-right: 20px
         float: right
 // END -- Styles for page wrapper

@@ -1,32 +1,26 @@
 export default function createSpinner(multipleSelectClass) {
     var selects = document.querySelectorAll(multipleSelectClass)
-        , options
-        , list
-        , placeholder
-        , switcher
-        , arrowUp, arrowDown
-        , value;
+        , options, list, placeholder, switcher
+        , wrapper, arrowUp, arrowDown, value;
     $(selects).each(function () {
         var self = $(this);
         $(self).hide();
-        
         options = $(self).children();
-        
-        $(self).wrap('<div class="multiple-select__wrapper"></div>').before('<div class="multiple-select__placeholder">'+($(options[0]).html())+'</div>').after('<ul class="multiple-select__list"></ul>');
+        $(self).wrap('<div class="multiple-select"></div>').before('<div class="multiple-select__placeholder">' + ($(options[0]).html()) + '</div>').after('<ul class="multiple-select__list"></ul>');
         list = $(self).next('ul.multiple-select__list');
         placeholder = $(self).parent().find('div.multiple-select__placeholder');
+        wrapper = $(self).parent();
         $(list).hide();
         switcher = $(placeholder).after('<div class="multiple-select__switcher"></div>').next();
         $(switcher).append('<div class="icon icon-arrow-up"></div>').append('<div class="icon icon-arrow-down"></div>');
         for (var i = 0; i < options.length; i++) {
             $('<li data-item="' + i + '"></li>').text(options[i].innerHTML).appendTo(list);
         }
-//         Clickers BEGIN
-        $(switcher).on('click', function (e) {
+        
+        //         Clickers BEGIN
+        $(wrapper).on('click', function (e) {
             e.stopPropagation();
-            var target = $(e.target);
-            console.log($(target).parent().next().next());
-            $(target).parent().next().next().fadeToggle(200);
+           $(this).find('ul.multiple-select__list').fadeToggle(200);
         });
         $(list).children().on('click', function (e) {
             e.stopPropagation();

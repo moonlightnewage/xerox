@@ -1,20 +1,19 @@
 .header
-    
     .header__top-block
         +clr
         .header__logo
             float: left
-            width: width(1230, 220)
+            width: percentage(220/1230)
             padding: 15px 0 15px 20px
 
-        .search__form
-            width: width(1230, 645)
+        .search-form
+            width: percentage(645/1230)
             height: 30px
             padding: 20px 0
             display: inline-table
             float: left
             .search
-                width: width(645, 615)
+                width: percentage(615/645)
                 height: 30px
                 .search__input
                     border: 1px solid #dcdee0
@@ -26,12 +25,11 @@
                         font-size: em(12, 13)
                         padding-left: 15px
                         float: left
-                        width: width(615, 548)
+                        width: percentage(548/615)
                         height: 100%
                         margin: 0
                     .search__btn
                         float: right
-                        width: width(615, 60)
                         height: 100%
                         margin: 0
                         +clr
@@ -39,17 +37,13 @@
                             float: left
                             background-color: #fff
                             border-left: 1px solid #dcdee0
-                            width: 50%
-                            height: 100%
                         .icon-arrow-down_large
-                            background-position: -132px -107px
+                            +s(arrow-down_large)
                         .icon-search
-                            background-position: 6px -104px
+                            +s(search)
                         
             .icon-settings
-                background-position: -117px -45px
-                width: 16px
-                height: 16px
+                +s(settings-gray)
                 cursor: pointer
                 display: table-cell
                 vertical-align: middle
@@ -57,14 +51,12 @@
         .user
             float: right
             padding: 15px 20px 15px 0
-            width: width(1230, 360)
+            width: percentage(360/1230)
             +clr
             
             .user__icon
+                +s(user-gray)
                 float: right
-                background-position: 0px 0px
-                width: 37px
-                height: 37px
                 cursor: pointer
             .user__login
                 float: right
@@ -76,9 +68,8 @@
                 float: right
                 margin-top: 8px
                 
-    .header__top-nav
+    .top-nav
         border: 1px solid #dcdee0
-        
         ul
             +clr
             .top-nav__item
@@ -94,46 +85,48 @@
                     background-color: $bg-dark
                     cursor: pointer
                     .top-nav__item-text
-                        color: #fff
-                    .icon-window
-                        background-position: -83px -81px
-                    .icon-file
-                        background-position: -143px -48px
-                    .icon-stack
-                        background-position: -78px -110px
-                    .icon-star
-                        background-position: -5px -52px
+                        .text
+                            color: #fff
+                        .icon-window
+                            +s(window-white)
+                        .icon-file
+                            +s(file-white)
+                        .icon-stack
+                            +s(stack-white)
+                        .icon-star
+                            +s(star-white)
 
                             
                 .top-nav__item-text
                     text-decoration: none
-                    text-transform: uppercase
-                    font-size: em(12, 13)
-                    color: $dark-gray
-                    padding: 0 5px
-                    display: inline-block
-                    overflow: hidden
-                .top-nav__item-extra
-                    padding: 0 5px
-                    margin-bottom: 1px
-                    background-color: #ff6c32
-                    border: none
-                    border-radius: 10px
-                    font-family: $font-regular
-                    font-size: em(10, 13)
-                    font-weight: 400
-                    color: #fff
-                    display: inline-block
-                    overflow: hidden
-                .icon
-                    width: 16px
-                    height: 16px
-                .icon-window
-                    background-position: -117px 0px
-                .icon-file
-                    background-position: -143px -72px
-                .icon-stack
-                    background-position: -104px -110px
-                .icon-star
-                    background-position: -41px -52px
+                    .text
+                        text-transform: uppercase
+                        font-size: em(12, 13)
+                        color: $dark-gray
+                        display: inline-block
+                        overflow: hidden
+                        padding: 0 5px
+                    .extra
+                        padding: 0 5px
+                        margin-left: 3px
+                        background-color: #ff6c32
+                        border: none
+                        border-radius: 10px
+                        font-family: $font-regular
+                        font-size: em(10, 13)
+                        font-weight: 400
+                        color: #fff
+                        display: inline-block
+                        overflow: hidden
+                    .icon
+                        display: inline-block
+                        overflow: hidden
+                    .icon-window
+                        +s(window-gray)
+                    .icon-file
+                        +s(file_gray)
+                    .icon-stack
+                        +s(stack-gray)
+                    .icon-star
+                        +s(star-gray)
         

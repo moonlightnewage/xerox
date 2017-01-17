@@ -5,7 +5,7 @@ export default function slideBlock() {
     
     $(blocks).each(function() {
        var self = $(this);
-        trigger = $(self).find('.meta-top__trigger');
+        trigger = $(self).find('.section__trigger');
 
 //        BEGIN Clicker
         $(trigger).click(function() {

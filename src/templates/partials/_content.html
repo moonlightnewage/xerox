@@ -3,9 +3,9 @@
 <section class="section content highlighted">
     <!--Section meta BEGIN-->
     <div class="section__meta-top"> 
-       <span class="icon icon-arrow-down meta-top__trigger"></span>
-        <h1 class="meta-top__heading">Content</h1>
-        <button class="meta-top__btn">Edit</button>
+       <span class="icon icon-arrow-down section__trigger"></span>
+        <h1 class="section__heading">Content</h1>
+        <button class="section__btn">Edit</button>
     </div>
     <!--Section meta END-->
     
@@ -13,17 +13,17 @@
     <div class="section__block">
 <!-- Section navigation BEGIN-->
         <div class="section__nav">
-          <div class="nav__item">
+          <div class="item">
            <span class="label">Show</span>
-            <select class="multiple-select">
+            <select class="select">
                 <option value="0">All Types</option>
                 <option value="1">Type 1</option>
                 <option value="2">Type 2</option>
             </select>
             </div> 
-            <div class="nav__item">
+            <div class="item">
             <span class="label">Add</span>
-            <select class="multiple-select" id="calendar">
+            <select class="select" id="calendar">
                 <option value="0">Calendar</option>
                 <option value="1">Calendar</option>
                 <option value="2">Calendar</option>
@@ -38,29 +38,29 @@
        
 <!--    Section content table BEGIN-->
         <div class="section__table" data-style="">
-            <div class="table__head">
-                <div class="table__col-left">
+            <div class="head">
+                <div class="col-left">
                     <div class="head__elem">Title<span class="icon icon-arrow-down"></span></div>
                 </div>
-                <div class="table__col-right">
+                <div class="col-right">
                     <div class="head__elem owner">Owner</div>
                     <div class="head__elem edited">Edited</div>
                     <div class="head__elem size">Size</div>
                 </div>
             </div> 
-            <div class="table__body">
+            <div class="body">
                {% for item in data.content_table %}
                 <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                         <div class="cell icon icon-folder-single"></div>
-                        <div class="cell cell__heading"> <a href="#!" class="title">{{item.title}}</a>
+                        <div class="cell cell-heading"> <a href="#!" class="title">{{item.title}}</a>
                             <p class="text">{{item.text}}</p>
                         </div>
                     </div>
-                    <div class="table__col-right"> 
-                       <a href="#!" class="cell cell__owner">{{item.owner}}</a>
-                        <div class="cell cell__date">{{item.date}}</div>
-                        <div class="cell cell__size">{{item.size}}</div>
+                    <div class="col-right"> 
+                       <a href="#!" class="cell cell-owner">{{item.owner}}</a>
+                        <div class="cell cell-date">{{item.date}}</div>
+                        <div class="cell cell-size">{{item.size}}</div>
                     </div>
                 </div> 
                 {% endfor %} 

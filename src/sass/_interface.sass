@@ -24,24 +24,29 @@
 // icons
 .icon
     display: inline-block
-    background-image: url('../img/sprite.png')
-    background-repeat: no-repeat
-    overflow: hidden
-    text-align: center
+    //background-image: url('../img/sprite.png')
+    //background-repeat: no-repeat
+    //overflow: hidden
+    //text-align: center
 
 // selects
-.multiple-select__wrapper
+.multiple-select
     display: inline-flex
     position: relative
     height: 30px
+    cursor: pointer
     +clr
     .multiple-select__placeholder
+        +vertical
         height: 100%
+        width: 100%
         overflow: hidden
         background-color: #fff
         float: left
-        padding: 8px 15px 10px
+        padding: 0 10px
         font-family: $font-bold
+        font-size: 1em
+            
     .multiple-select__list
         position: absolute
         top: 35px
@@ -63,12 +68,10 @@
         overflow: hidden
         .icon
             display: block
-            width: 15px
-            height: 15px
             background-color: #fff
             cursor: pointer
         .icon-arrow-up
-            background-position: -16px -127px
+            +s(arrow-up-gray)
         .icon-arrow-down
-            background-position: -33px -134px
+            +s(arrow-down-gray)
             

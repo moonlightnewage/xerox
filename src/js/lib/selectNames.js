@@ -42,7 +42,7 @@ export default function selectNames(step) {
     });
     
     // Clicker for arrows
-    $(arrowRight).on('click', function (e) {
+    $(arrowRight).parent().on('click', function (e) {
         e.stopPropagation();
            for (var i = 0; i < step; i++) {
                 $(users[i]).hide();
@@ -52,7 +52,7 @@ export default function selectNames(step) {
             }
     });
     
-    $(arrowLeft).on('click', function(e) {
+    $(arrowLeft).parent().on('click', function(e) {
        e.stopPropagation();
         for (var i = 0; i < step; i++) {
                 $(users[i]).show();

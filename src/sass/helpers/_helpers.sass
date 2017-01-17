@@ -4,9 +4,6 @@
 @function img-url($image)
   @return url('../img/#{$image}')
 
-@function width($general, $block)
-  @return ($block*100/$general) + %
-
 =image($image)
   background-image: img-url($image)
 

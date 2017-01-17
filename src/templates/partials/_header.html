@@ -8,7 +8,7 @@
 <!--   Logo END-->
    
 <!--Search form BEGIN-->
-    <form action="" class="search__form">
+    <form action="" class="search-form">
         <div class="search">
             <div class="search__input">
                 <input type="text" placeholder="Search">
@@ -33,13 +33,17 @@
 <!--Top block BEGIN-->
 
 <!--Top navigation BEGIN-->
-    <nav class="header__top-nav">
+    <nav class="top-nav">
         <ul>
            {% for item in items.top_nav %}
             <li class="top-nav__item">
-                <span class="icon icon-{{item.icon}}"></span>
-                <a href="#" class="top-nav__item-text">{{item.text}}</a>
-                {% if item.extra %}<span class="top-nav__item-extra">{{item.extra}}</span>{% endif %}
+                
+                <a href="#" class="top-nav__item-text">
+                    <span class="icon icon-{{item.icon}}"></span>
+                    <span class="text">{{item.text}}</span>
+                    <span class="extra">{{item.extra}}</span>
+                </a>
+                {% if item.extra %}{% endif %}
             </li>
             {% endfor %}
         </ul>

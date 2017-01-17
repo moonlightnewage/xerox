@@ -21,7 +21,7 @@
           <a href="#" class="header__logo"><img src="img/header-logo.png" alt="Duracell"></a>
           <!--   Logo END-->
           <!--Search form BEGIN-->
-          <form action="" class="search__form">
+          <form action="" class="search-form">
             <div class="search">
               <div class="search__input"> <input type="text" placeholder="Search">
                 <div class="search__btn"> <button class="icon icon-arrow-down_large"></button> <button class="icon icon-search"></button> </div>
@@ -37,12 +37,20 @@
         </div>
         <!--Top block BEGIN-->
         <!--Top navigation BEGIN-->
-        <nav class="header__top-nav">
+        <nav class="top-nav">
           <ul>
-            <li class="top-nav__item"> <span class="icon icon-window"></span> <a href="#" class="top-nav__item-text">Home</a> </li>
-            <li class="top-nav__item"> <span class="icon icon-file"></span> <a href="#" class="top-nav__item-text">Recent</a> </li>
-            <li class="top-nav__item"> <span class="icon icon-stack"></span> <a href="#" class="top-nav__item-text">My tasks</a> <span class="top-nav__item-extra">282</span> </li>
-            <li class="top-nav__item"> <span class="icon icon-star"></span> <a href="#" class="top-nav__item-text">My favorites</a> </li>
+            <li class="top-nav__item">
+              <a href="#" class="top-nav__item-text"> <span class="icon icon-window"></span> <span class="text">Home</span> <span class="extra"></span> </a>
+            </li>
+            <li class="top-nav__item">
+              <a href="#" class="top-nav__item-text"> <span class="icon icon-file"></span> <span class="text">Recent</span> <span class="extra"></span> </a>
+            </li>
+            <li class="top-nav__item">
+              <a href="#" class="top-nav__item-text"> <span class="icon icon-stack"></span> <span class="text">My tasks</span> <span class="extra">282</span> </a>
+            </li>
+            <li class="top-nav__item">
+              <a href="#" class="top-nav__item-text"> <span class="icon icon-star"></span> <span class="text">My favorites</span> <span class="extra"></span> </a>
+            </li>
           </ul>
         </nav>
         <!--Top navigation END-->
@@ -66,19 +74,19 @@
           <!--Content section BEGIN-->
           <section class="section content highlighted">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down meta-top__trigger"></span>
-              <h1 class="meta-top__heading">Content</h1> <button class="meta-top__btn">Edit</button> </div>
+            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+              <h1 class="section__heading">Content</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
             <div class="section__block">
               <!-- Section navigation BEGIN-->
               <div class="section__nav">
-                <div class="nav__item"> <span class="label">Show</span> <select class="multiple-select">
+                <div class="item"> <span class="label">Show</span> <select class="select">
                 <option value="0">All Types</option>
                 <option value="1">Type 1</option>
                 <option value="2">Type 2</option>
             </select> </div>
-                <div class="nav__item"> <span class="label">Add</span> <select class="multiple-select" id="calendar">
+                <div class="item"> <span class="label">Add</span> <select class="select" id="calendar">
                 <option value="0">Calendar</option>
                 <option value="1">Calendar</option>
                 <option value="2">Calendar</option>
@@ -88,87 +96,87 @@
               <!-- Section navigation END-->
               <!--    Section content table BEGIN-->
               <div class="section__table" data-style="">
-                <div class="table__head">
-                  <div class="table__col-left">
+                <div class="head">
+                  <div class="col-left">
                     <div class="head__elem">Title<span class="icon icon-arrow-down"></span></div>
                   </div>
-                  <div class="table__col-right">
+                  <div class="col-right">
                     <div class="head__elem owner">Owner</div>
                     <div class="head__elem edited">Edited</div>
                     <div class="head__elem size">Size</div>
                   </div>
                 </div>
-                <div class="table__body">
+                <div class="body">
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
                         <p class="text">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">binouye</a>
-                      <div class="cell cell__date">12/18/14</div>
-                      <div class="cell cell__size">102Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
+                      <div class="cell cell-date">12/18/14</div>
+                      <div class="cell cell-size">102Mb</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
                         <p class="text">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">binouye</a>
-                      <div class="cell cell__date">10/07/14</div>
-                      <div class="cell cell__size">90Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
+                      <div class="cell cell-date">10/07/14</div>
+                      <div class="cell cell-size">90Mb</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">DocuShare Print and Email API</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">DocuShare Print and Email API</a>
                         <p class="text">DocuShare API used to populate a menu</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">davidson</a>
-                      <div class="cell cell__date">10/08/14</div>
-                      <div class="cell cell__size">8Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">davidson</a>
+                      <div class="cell cell-date">10/08/14</div>
+                      <div class="cell cell-size">8Mb</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">The CMIS Standard</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">The CMIS Standard</a>
                         <p class="text">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">melisa</a>
-                      <div class="cell cell__date">10/09/14</div>
-                      <div class="cell cell__size">240Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">melisa</a>
+                      <div class="cell cell-date">10/09/14</div>
+                      <div class="cell cell-size">240Mb</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
                         <p class="text">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">binouye</a>
-                      <div class="cell cell__date">12/18/14</div>
-                      <div class="cell cell__size">102Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
+                      <div class="cell cell-date">12/18/14</div>
+                      <div class="cell cell-size">102Mb</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="table__col-left">
+                    <div class="col-left">
                       <div class="cell icon icon-folder-single"></div>
-                      <div class="cell cell__heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
+                      <div class="cell cell-heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
                         <p class="text">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="table__col-right"> <a href="#!" class="cell cell__owner">glynn</a>
-                      <div class="cell cell__date">11/23/14</div>
-                      <div class="cell cell__size">45Mb</div>
+                    <div class="col-right"> <a href="#!" class="cell cell-owner">glynn</a>
+                      <div class="cell cell-date">11/23/14</div>
+                      <div class="cell cell-size">45Mb</div>
                     </div>
                   </div>
                 </div>
@@ -181,13 +189,13 @@
           <!--Calendar section BEGIN-->
           <section class="section calendar">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down meta-top__trigger"></span>
-              <h1 class="meta-top__heading">Calendar</h1> <button class="meta-top__btn">Edit</button> </div>
+            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+              <h1 class="section__heading">Calendar</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
             <div class="section__block">
               <div class="section__content">
-                <div class="data">There are currently no items in the calendar portlet.</div>
+                <div class="no-data">There are currently no items in the calendar portlet.</div>
               </div>
             </div>
             <!--Section block END-->
@@ -200,13 +208,13 @@
           <!--Shortcuts section BEGIN-->
           <section class="section shortcuts">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down meta-top__trigger"></span>
-              <h1 class="meta-top__heading">Shortcuts</h1> <button class="meta-top__btn">Edit</button> </div>
+            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+              <h1 class="section__heading">Shortcuts</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
             <div class="section__block">
               <div class="section__content">
-                <div class="data">There are currently no items in the shortcuts portlet.</div>
+                <div class="no-data">There are currently no items in the shortcuts portlet.</div>
               </div>
             </div>
             <!--Section block END-->
@@ -215,8 +223,8 @@
           <!--Membership section BEGIN-->
           <section class="section membership">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down meta-top__trigger"></span>
-              <h1 class="meta-top__heading">Membership</h1> <button class="meta-top__btn">Edit</button> </div>
+            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+              <h1 class="section__heading">Membership</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
             <div class="section__block">
@@ -225,11 +233,14 @@
               <!--       Section sort END-->
               <!--       Section navigation BEGIN-->
               <div class="section__nav">
-                <div class="nav__item"> <span class="label">View</span> <select class="multiple-select">
+                <div class="item"> <span class="label">View</span> <select class="select">
                 <option value="0">1-8 of 14</option>
                 <option value="1">9-14 of 14</option>
             </select> </div>
-                <div class="icons"> <span class="icon icon-arrow-left"></span> <span class="icon icon-arrow-right"></span> </div>
+                <div class="icons">
+                  <div class="icon__wrapper"><span class="icon icon-arrow-left"></span></div>
+                  <div class="icon__wrapper"><span class="icon icon-arrow-right"></span></div>
+                </div>
               </div>
               <!--       Section navigation END-->
               <!--       Section content BEGIN-->
@@ -272,23 +283,23 @@
       <footer class="footer">
         <!--   Footer navigation BEGIN-->
         <nav class="footer__btm-nav">
-          <div class="btm-nav__block">
-            <div class="block__item"><a href="#!">Users and Groups</a></div>
-            <div class="block__item"><a href="#!">Help</a></div>
+          <div class="footer__block">
+            <div class="item"><a href="#!">Users and Groups</a></div>
+            <div class="item"><a href="#!">Help</a></div>
           </div>
-          <div class="btm-nav__block">
-            <div class="block__item"><a href="#!">About DocuShare</a></div>
-            <div class="block__item"><a href="#!">Statistics</a></div>
+          <div class="footer__block">
+            <div class="item"><a href="#!">About DocuShare</a></div>
+            <div class="item"><a href="#!">Statistics</a></div>
           </div>
-          <div class="btm-nav__block">
-            <div class="block__item"><a href="#!">Mobile Client Settings</a></div>
-            <div class="block__item"><a href="#!">Cookies</a></div>
+          <div class="footer__block">
+            <div class="item"><a href="#!">Mobile Client Settings</a></div>
+            <div class="item"><a href="#!">Cookies</a></div>
           </div>
         </nav>
         <!--   Footer navigation END-->
         <!--   Footer copyright BEGIN-->
         <div class="footer__info">
-          <div class="info__copyright">
+          <div class="footer__copyright">
             <p>© 1996-2015 Xerox Corporation.</p>
             <p>All Rights Reserved.</p>
           </div>

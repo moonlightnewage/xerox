@@ -5,7 +5,7 @@
         
         .section__nav
             +clr
-            .nav__item
+            .item
                 display: table
                 float: left
                 .label
@@ -17,27 +17,25 @@
                 padding: 5px 10px
                 .icon
                     border: 1px solid #fff
-                    width: 28px
-                    height: 28px
                     padding: 5px
                     cursor: pointer
                 .icon-rect
-                    background-position: -26px -76px
+                    +s(rect-white)
                     border: 1px solid #fff
                     &:hover
                         border: 1px solid $border-gray
-                        background-position: -112px -73px
+                        +s(rect-gray)
                     &.active
                         border: 1px solid $border-gray
-                        background-position: -112px -73px
+                        +s(rect-gray)
                 .icon-lines
-                    background-position: -137px -18px
+                    +s(lines-white)
                     &:hover
                         border: 1px solid $border-gray
-                        background-position: -137px 6px
+                        +s(lines-gray)
                     &.active
                         border: 1px solid $border-gray
-                        background-position: -137px 6px
+                        +s(lines-gray)
                         
         // END -- Content navigation
         
@@ -48,7 +46,7 @@
             background-color: #fff
             width: 100%
 
-            .table__body
+            .body
                 display: flex
                 flex-wrap: wrap
                 .row__wrapper
@@ -56,7 +54,7 @@
                     border-bottom: 1px solid $border-gray
                     &:hover
                         .row
-                            .table__col-left
+                            .col-left
                                 .cell
                                     .title
                                         color: #fff
@@ -68,11 +66,9 @@
                         display: flex
                         cursor: pointer
 
-                        .table__col-left
+                        .col-left
                             .icon-folder-single
-                                background-position: -85px 0px
-                                width: 22px
-                                height: 20px
+                                +s(folder-single)
                             .cell
                                 .title
                                     @extend %link
@@ -81,16 +77,16 @@
                                     font-size: em(10, 13)
                                     color: $light-gray
 
-                        .table__col-right
+                        .col-right
                             display: flex
-                            .cell__owner
+                            .cell-owner
                                 @extend %link
                                 font-size: 1em
-                            .cell__date
+                            .cell-date
                                 font-family: $font-bold
                                 font-size: 1em
                                 font-weight: 600
-                            .cell__size
+                            .cell-size
                                 font-family: $font-regular
                                 font-size: 1em
                                 font-weight: 400
@@ -104,13 +100,21 @@
                             height: 100%
                             display: inline-block
                             cursor: pointer
+                            position: relative
                             &:hover
                                 background-color: $bg-dark
                             .icon
                                 display: inline-block
                                 overflow: hidden
-                                width: 16px
-                                height: 24px
+                                +vcenter
+                            .icon-bell
+                                +s(bell-white)
+                            .icon-sliders
+                                +s(sliders-white)
+                            .icon-star
+                                +s(star-white)
+                            .icon-settings
+                                +s(settings-white)
 
                                 
             // END -- Content table - general
@@ -120,22 +124,20 @@
                 
         .section__table[data-style="rows"]
             padding: 0 10px 10px 10px
-            .table__head
+            .head
                 display: flex
                 justify-content: space-between
                 border-bottom: 1px solid $border-gray
-                .table__col-left
+                .col-left
                     .head__elem
                         font-size: em(10, 13)
                         padding: 8px 0
                         margin-left: 40px
                         .icon-arrow-down
-                            background-position: -33px -136px
-                            width: 7px
-                            height: 6px
+                            +s(arrow-down-gray)
                             cursor: pointer
                             margin-left: 7px
-                .table__col-right
+                .col-right
                     .head__elem
                         display: inline-block
                         font-size: em(10, 13)
@@ -143,7 +145,7 @@
                         padding: 8px 0
 
             
-            .table__body
+            .body
                 flex-direction: column
                 .row__wrapper
                     &:last-of-type
@@ -153,13 +155,13 @@
                         justify-content: space-between
                         padding: 10px 0
 
-                        .table__col-left
+                        .col-left
                             .icon-folder-single
                                 margin: 0px 8px 10px 8px
                             .cell
                                 display: inline-block
 
-                        .table__col-right
+                        .col-right
                             justify-content: space-between
                             .cell
                                 display: inline-block
@@ -170,16 +172,6 @@
                         .icon__wrapper
                             width: 65px
                             padding: 15px
-                            .icon
-                                margin: 2px 10px 10px 10px
-                            .icon-bell
-                                background-position: -57px -79px
-                            .icon-sliders
-                                background-position: -52px -108px
-                            .icon-star
-                                background-position: -5px -50px
-                            .icon-settings
-                                background-position: -117px -24px
 
                                 
             // END -- Content table rows
@@ -189,38 +181,36 @@
                 
         .section__table[data-style="columns"]
             padding: 20px 10px 30px 10px
-            .table__head
+            .head
                 height: 10px
                 background-color: #fff
                 & > *
                     display: none
             
-            .table__body
-                flex-direction: row
-                justify-content: space-between
-                
+            .body
+                flex-direction: row               
                 .row__wrapper
                     cursor: pointer
-                    width: 240px
+                    width: 30%
                     padding: 20px 0 10px
-                    &:nth-of-type(-n+3)
-                        border-top: 1px solid $border-gray
+                    margin: 10px
+                    border-top: 1px solid $border-gray
                     &:hover
                             border-bottom: 1px solid #606568
                     .row
                         flex-direction: column
                         height: 100%
                         
-                        .table__col-left
+                        .col-left
                             display: flex
                             flex-direction: row
                             flex: 1 0 auto
                             .icon-folder-single
                                 margin: 0 10px
-                            .cell__heading
+                            .cell-heading
                                 width: 80%
 
-                        .table__col-right
+                        .col-right
                             flex-direction: row
                             flex: 0 0 auto
                             padding: 10px
@@ -236,13 +226,5 @@
                             width: 25%
                             text-align: center
                             padding-top: 10px
-                            .icon-bell
-                                background-position: -57px -74px
-                            .icon-sliders
-                                background-position: -52px -103px
-                            .icon-star
-                                background-position: -5px -46px
-                            .icon-settings
-                                background-position: -117px -19px
 
                 // END -- Content table -columns
