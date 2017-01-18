@@ -13,12 +13,12 @@
             <div class="search__input">
                 <input type="text" placeholder="Search">
                 <div class="search__btn">
-                    <button class="icon icon-arrow-down_large"></button>
-                    <button class="icon icon-search"></button>
+                    <button class="btn"><span class="icon icon-arrow-down_large"></span></button>
+                    <button class="btn"><span class="icon icon-search"></span></button>
                 </div>
             </div>
         </div>
-        <span class="icon icon-settings"></span>
+        <div class="icon-wrapper"><span class="icon icon-settings"></span></div>
     </form>
 <!--Search form END-->
 
@@ -39,11 +39,13 @@
             <li class="top-nav__item">
                 
                 <a href="#" class="top-nav__item-text">
-                    <span class="icon icon-{{item.icon}}"></span>
+                    <span class="icon-wrapper">
+                        <span class="icon icon-{{item.icon}}"></span>
+                    </span>
                     <span class="text">{{item.text}}</span>
-                    <span class="extra">{{item.extra}}</span>
+                    {% if item.extra %}<span class="extra">{{item.extra}}</span>{% endif %}
                 </a>
-                {% if item.extra %}{% endif %}
+                
             </li>
             {% endfor %}
         </ul>

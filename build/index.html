@@ -24,9 +24,11 @@
           <form action="" class="search-form">
             <div class="search">
               <div class="search__input"> <input type="text" placeholder="Search">
-                <div class="search__btn"> <button class="icon icon-arrow-down_large"></button> <button class="icon icon-search"></button> </div>
+                <div class="search__btn"> <button class="btn"><span class="icon icon-arrow-down_large"></span></button> <button class="btn"><span class="icon icon-search"></span></button> </div>
               </div>
-            </div> <span class="icon icon-settings"></span> </form>
+            </div>
+            <div class="icon-wrapper"><span class="icon icon-settings"></span></div>
+          </form>
           <!--Search form END-->
           <!--User block BEGIN-->
           <div class="user"> <button class="user__logout">Log out</button>
@@ -40,16 +42,20 @@
         <nav class="top-nav">
           <ul>
             <li class="top-nav__item">
-              <a href="#" class="top-nav__item-text"> <span class="icon icon-window"></span> <span class="text">Home</span> <span class="extra"></span> </a>
+              <a href="#" class="top-nav__item-text"> <span class="icon-wrapper">
+                        <span class="icon icon-window"></span> </span> <span class="text">Home</span> </a>
             </li>
             <li class="top-nav__item">
-              <a href="#" class="top-nav__item-text"> <span class="icon icon-file"></span> <span class="text">Recent</span> <span class="extra"></span> </a>
+              <a href="#" class="top-nav__item-text"> <span class="icon-wrapper">
+                        <span class="icon icon-file"></span> </span> <span class="text">Recent</span> </a>
             </li>
             <li class="top-nav__item">
-              <a href="#" class="top-nav__item-text"> <span class="icon icon-stack"></span> <span class="text">My tasks</span> <span class="extra">282</span> </a>
+              <a href="#" class="top-nav__item-text"> <span class="icon-wrapper">
+                        <span class="icon icon-stack"></span> </span> <span class="text">My tasks</span> <span class="extra">282</span> </a>
             </li>
             <li class="top-nav__item">
-              <a href="#" class="top-nav__item-text"> <span class="icon icon-star"></span> <span class="text">My favorites</span> <span class="extra"></span> </a>
+              <a href="#" class="top-nav__item-text"> <span class="icon-wrapper">
+                        <span class="icon icon-star"></span> </span> <span class="text">My favorites</span> </a>
             </li>
           </ul>
         </nav>
@@ -60,13 +66,14 @@
       <div class="page-wrapper">
         <!--Page header BEGIN-->
         <header class="page-header">
-          <div class="page-header__info"> <span class="icon icon-folder-double"></span>
-            <div class="info__heading">
-              <h1 class="info__title">Cogniance, Inc. Home Page</h1>
-              <p class="info__text">PM, Eng & SQA document share and test file locations for Cogniance engagements</p>
+          <div class="page-header__info">
+            <div class="icon-wrapper"><span class="icon icon-folder-double"></span></div>
+            <div class="page-header__heading">
+              <h1 class="page-header__title">Cogniance, Inc. Home Page</h1>
+              <p class="page-header__text">PM, Eng & SQA document share and test file locations for Cogniance engagements</p>
             </div>
           </div>
-          <div class="page-header__btn"> <button class="btn icon icon-star"></button> <button class="btn icon icon-sliders"></button> </div>
+          <div class="page-header__btn"> <button class="btn"><span class="icon icon-star"></span></button> <button class="btn"><span class="icon icon-sliders"></span></button> </div>
         </header>
         <!--Page header END-->
         <!--MAIN BEGIN-->
@@ -74,7 +81,9 @@
           <!--Content section BEGIN-->
           <section class="section content highlighted">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+            <div class="section__meta-top">
+              <div class="section__trigger"> <span class="icon icon-arrow-down">
+       </span> </div>
               <h1 class="section__heading">Content</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
@@ -91,7 +100,10 @@
                 <option value="1">Calendar</option>
                 <option value="2">Calendar</option>
             </select> </div>
-                <div class="icons"> <span class="icon icon-rect"></span> <span class="icon icon-lines"></span> </div>
+                <div class="icons">
+                  <div class="icon-wrapper"><span class="icon icon-rect"></span></div>
+                  <div class="icon-wrapper"><span class="icon icon-lines"></span></div>
+                </div>
               </div>
               <!-- Section navigation END-->
               <!--    Section content table BEGIN-->
@@ -189,7 +201,8 @@
           <!--Calendar section BEGIN-->
           <section class="section calendar">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+            <div class="section__meta-top">
+              <div class="section__trigger"><span class="icon icon-arrow-down"></span></div>
               <h1 class="section__heading">Calendar</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
@@ -208,7 +221,8 @@
           <!--Shortcuts section BEGIN-->
           <section class="section shortcuts">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+            <div class="section__meta-top">
+              <div class="section__trigger"><span class="icon icon-arrow-down"></span></div>
               <h1 class="section__heading">Shortcuts</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
@@ -223,7 +237,8 @@
           <!--Membership section BEGIN-->
           <section class="section membership">
             <!--Section meta BEGIN-->
-            <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+            <div class="section__meta-top">
+              <div class="section__trigger"><span class="icon icon-arrow-down"></span></div>
               <h1 class="section__heading">Membership</h1> <button class="section__btn">Edit</button> </div>
             <!--Section meta END-->
             <!--Section block BEGIN-->
@@ -238,36 +253,50 @@
                 <option value="1">9-14 of 14</option>
             </select> </div>
                 <div class="icons">
-                  <div class="icon__wrapper"><span class="icon icon-arrow-left"></span></div>
-                  <div class="icon__wrapper"><span class="icon icon-arrow-right"></span></div>
+                  <div class="icon-wrapper"><span class="icon icon-arrow-left"></span></div>
+                  <div class="icon-wrapper"><span class="icon icon-arrow-right"></span></div>
                 </div>
               </div>
               <!--       Section navigation END-->
               <!--       Section content BEGIN-->
               <div class="section__content">
                 <ul class="users">
-                  <li class="user" data-name="David Dhawan"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">David Dhawan</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">DS</span> </li>
-                  <li class="user"
-                    data-name="John Davidson"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">John Davidson</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                    <li class="user"
-                      data-name="Christian Miller"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">Christian Miller</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                      <li class="user"
-                        data-name="John Davidson"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">John Davidson</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                        <li class="user"
-                          data-name="Roy Richardson"> <span class="user__icon icon icon-user-off"></span> <span class="user__name"><a href="#!" class="link">Roy Richardson</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                          <li class="user"
-                            data-name="Joe Rod"> <span class="user__icon icon icon-user-off"></span> <span class="user__name"><a href="#!" class="link">Joe Rod</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                            <li class="user"
-                              data-name="Jenny Watson"> <span class="user__icon icon icon-user-off"></span> <span class="user__name"><a href="#!" class="link">Jenny Watson</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                              <li
-                                class="user" data-name="Mary Monro"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">Mary Monro</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                              <li
-                                class="user" data-name="Daniel Fill"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">Daniel Fill</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                              <li
-                                class="user" data-name="Angela Grant"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">Angela Grant</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
-                              <li
-                                class="user" data-name="Frederick Mayor"> <span class="user__icon icon icon-user-on"></span> <span class="user__name"><a href="#!" class="link">Frederick Mayor</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">DS</span> </li>
-                              <li class="user" data-name="Emma Clarks"> <span class="user__icon icon icon-user-off"></span> <span class="user__name"><a href="#!" class="link">Emma Clarks</a></span> <span class="user__contact icon icon-mail"></span> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="David Dhawan">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">David Dhawan</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">DS</span> </li>
+                  <li class="user" data-name="John Davidson">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">John Davidson</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Christian Miller">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">Christian Miller</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="John Davidson">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">John Davidson</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Roy Richardson">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-off"></span></div> <span class="user__name"><a href="#!" class="link">Roy Richardson</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Joe Rod">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-off"></span></div> <span class="user__name"><a href="#!" class="link">Joe Rod</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Jenny Watson">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-off"></span></div> <span class="user__name"><a href="#!" class="link">Jenny Watson</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Mary Monro">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">Mary Monro</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Daniel Fill">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">Daniel Fill</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Angela Grant">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">Angela Grant</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
+                  <li class="user" data-name="Frederick Mayor">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-on"></span></div> <span class="user__name"><a href="#!" class="link">Frederick Mayor</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">DS</span> </li>
+                  <li class="user" data-name="Emma Clarks">
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-off"></span></div> <span class="user__name"><a href="#!" class="link">Emma Clarks</a></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div> <span class="user__info">CPX</span> </li>
                 </ul>
               </div>
               <!--       Section content BEGIN-->

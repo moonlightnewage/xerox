@@ -2,7 +2,8 @@
 
 <section class="section membership">
     <!--Section meta BEGIN-->
-        <div class="section__meta-top"> <span class="icon icon-arrow-down section__trigger"></span>
+        <div class="section__meta-top"> 
+           <div class="section__trigger"><span class="icon icon-arrow-down"></span></div>
             <h1 class="section__heading">Membership</h1>
             <button class="section__btn">Edit</button>
         </div>
@@ -28,8 +29,8 @@
             </select>
             </div>
             <div class="icons"> 
-                <div class="icon__wrapper"><span class="icon icon-arrow-left"></span></div> 
-                <div class="icon__wrapper"><span class="icon icon-arrow-right"></span></div> 
+                <div class="icon-wrapper"><span class="icon icon-arrow-left"></span></div> 
+                <div class="icon-wrapper"><span class="icon icon-arrow-right"></span></div> 
             </div>
         </div>
 <!--       Section navigation END-->
@@ -39,9 +40,9 @@
             <ul class="users"> 
                {% for user in data.users %}
                 <li class="user" data-name="{{user.name}}">
-                    <span class="user__icon icon icon-user-{{user.status}}"></span>
+                    <div class="icon-wrapper"><span class="user__icon icon icon-user-{{user.status}}"></span></div>
                     <span class="user__name"><a href="#!" class="link">{{user.name}}</a></span>
-                    <span class="user__contact icon icon-mail"></span>
+                    <div class="icon-wrapper user__contact"><span class="icon icon-mail"></span></div>
                     <span class="user__info">{{user.info}}</span>
                 </li> 
                 {% endfor %} 

@@ -12,7 +12,8 @@ export default function createSpinner(multipleSelectClass) {
         wrapper = $(self).parent();
         $(list).hide();
         switcher = $(placeholder).after('<div class="multiple-select__switcher"></div>').next();
-        $(switcher).append('<div class="icon icon-arrow-up"></div>').append('<div class="icon icon-arrow-down"></div>');
+        $(switcher).append('<span class="icon icon-arrow-up"></span>').append('<span class="icon icon-arrow-down"></span>');
+        $(switcher).children().wrap('<div class="icon-wrapper"></div>')
         for (var i = 0; i < options.length; i++) {
             $('<li data-item="' + i + '"></li>').text(options[i].innerHTML).appendTo(list);
         }

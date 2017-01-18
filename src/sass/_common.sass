@@ -27,13 +27,18 @@ body
         +clr
         .section__trigger
             @extend %btn
+            width: 15px
+            height: 15px
             padding: 10px
-            overflow: hidden
+            display: inline-block
+            position: relative
             cursor: pointer
             transition: 0.5s
             &.up
                 transform: rotateX(180deg)
-                background-position: -26px -127px
+            .icon-arrow-down
+                +s(arrow-down-gray)
+                +vcenter
         .section__heading
             display: inline-block
             margin-left: 15px
@@ -44,9 +49,7 @@ body
             @extend %btn
             float: right
             display: inline-block
-        .icon-arrow-down
-            +s(arrow-down-gray)
-            background-position: -26px -128px
+        
     .section__block            
         .section__nav
             margin-top: 8px
@@ -75,12 +78,14 @@ body
         +clr
         .page-header__info
             float: left
-            .icon-folder-double
-                +s(folder-double)
-            .info__heading
+            .icon-wrapper
+                display: inline-block
+                .icon-folder-double
+                    +s(folder-double)
+            .page-header__heading
                 display: inline-block
                 padding: 0 15px
-                .info__title
+                .page-header__title
                     font-family: $font-regular
                     font-size: em(20, 13)
                     font-weight: 300
@@ -89,13 +94,15 @@ body
             float: right
             .btn
                 @extend %btn
-                padding: 15px
-            .icon-sliders
-                +s(sliders-gray)
-                background-position: -19px -103px
-            .icon-star
-                +s(star-gray)
-                background-position: -34px -45px
+                width: 32px
+                height: 32px
+                position: relative
+                .icon-sliders
+                    +s(sliders-gray)
+                    +vcenter
+                .icon-star
+                    +s(star-gray)
+                    +vcenter
 
     .page-main
         width: percentage(730/1230)

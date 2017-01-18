@@ -22,7 +22,7 @@
                 float: right
                 display: inline-block
                 overflow: hidden
-                .icon__wrapper
+                .icon-wrapper
                     display: inline-block
                     width: 30px
                     height: 30px
@@ -48,32 +48,30 @@
                     .user__name
                         float: left
                         display: inline-block
-                        overflow: hidden
                         padding: 5px 0 0 5px
                         .link
                             @extend %link 
-                    .user__icon
-                        @extend .user__name
+                    .icon-wrapper
+                        float: left
                         display: inline-block
-                        overflow: hidden
-                        margin-right: 5px
-                    .icon-user-off
-                        +s(user-off)
-                    .icon-user-on
-                        +s(user-on)    
+                        width: 25px
+                        height: 25px
+                        position: relative
+                        .icon-user-off
+                            +s(user-off)
+                        .icon-user-on
+                            +s(user-on)
+                        .icon-mail
+                            +s(Mail)
+                            +vcenter
+                            cursor: pointer
                     .user__contact
                         float: right
-                        display: inline-block
-                        overflow: hidden
-                        margin-top: 7px
-                    .icon-mail
-                        +s(Mail)
-                        cursor: pointer
-                        margin-left: 4px
+                    
                     .user__info
-                        @extend .user__contact
+                        +vertical
+                        float: right
                         display: inline-block
-                        overflow: hidden
                         background-color: $bg-blue
                         padding: 2px 5px
                         margin: 5px 7px 0 0

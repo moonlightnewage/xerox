@@ -11,19 +11,19 @@ export function tabContent () {
         iconLines = $('.content .icons .icon-lines'),
         table = $('.content .section__table');
     
-    $(iconLines).addClass('active');
+    $(iconLines).parent().addClass('active');
     $(table).attr('data-style', 'rows');
     
     
     $(iconRect).on('click', function(e) {
         e.stopPropagation();
-        $(iconRect).addClass('active').siblings().removeClass('active');
+        $(iconRect).parent().addClass('active').siblings().removeClass('active');
         $(table).attr('data-style', 'columns');
     });
     
     $(iconLines).on('click', function(e) {
         e.stopPropagation();
-        $(iconLines).addClass('active').siblings().removeClass('active');
+        $(iconLines).parent().addClass('active').siblings().removeClass('active');
         $(table).attr('data-style', 'rows');
     });
     

@@ -10,11 +10,12 @@
             width: percentage(645/1230)
             height: 30px
             padding: 20px 0
-            display: inline-table
             float: left
+            +clr
             .search
                 width: percentage(615/645)
                 height: 30px
+                float: left
                 .search__input
                     border: 1px solid #dcdee0
                     width: 100%
@@ -33,20 +34,29 @@
                         height: 100%
                         margin: 0
                         +clr
-                        .icon
-                            float: left
+                        .btn
                             background-color: #fff
                             border-left: 1px solid #dcdee0
+                            float: left
+                            position: relative
+                            width: 28px
+                            height: 28px
                         .icon-arrow-down_large
                             +s(arrow-down_large)
+                            +vcenter
                         .icon-search
                             +s(search)
-                        
-            .icon-settings
-                +s(settings-gray)
+                            +vcenter
+            .icon-wrapper
+                width: 16px
+                height: 30px
+                margin-left: 15px
+                float: left
+                position: relative
                 cursor: pointer
-                display: table-cell
-                vertical-align: middle
+                .icon-settings
+                    +s(settings-gray)
+                    +vcenter
 
         .user
             float: right
@@ -87,25 +97,26 @@
                     .top-nav__item-text
                         .text
                             color: #fff
-                        .icon-window
-                            +s(window-white)
-                        .icon-file
-                            +s(file-white)
-                        .icon-stack
-                            +s(stack-white)
-                        .icon-star
-                            +s(star-white)
+                        .icon-wrapper
+                            .icon-window
+                                +s(window-white)
+                            .icon-file
+                                +s(file-white)
+                            .icon-stack
+                                +s(stack-white)
+                            .icon-star
+                                +s(star-white)
 
                             
                 .top-nav__item-text
                     text-decoration: none
+                    display: block
+                    padding: 6px 10px
                     .text
+                        +vertical
                         text-transform: uppercase
                         font-size: em(12, 13)
                         color: $dark-gray
-                        display: inline-block
-                        overflow: hidden
-                        padding: 0 5px
                     .extra
                         padding: 0 5px
                         margin-left: 3px
@@ -116,17 +127,21 @@
                         font-size: em(10, 13)
                         font-weight: 400
                         color: #fff
-                        display: inline-block
-                        overflow: hidden
-                    .icon
-                        display: inline-block
-                        overflow: hidden
-                    .icon-window
-                        +s(window-gray)
-                    .icon-file
-                        +s(file_gray)
-                    .icon-stack
-                        +s(stack-gray)
-                    .icon-star
-                        +s(star-gray)
+                    .icon-wrapper
+                        width: 26px
+                        height: 24px
+                        position: relative
+                        margin-right: 15px
+                        .icon-window
+                            +s(window-gray)
+                            +vcenter
+                        .icon-file
+                            +s(file_gray)
+                            +vcenter
+                        .icon-stack
+                            +s(stack-gray)
+                            +vcenter
+                        .icon-star
+                            +s(star-gray)
+                            +vcenter
         

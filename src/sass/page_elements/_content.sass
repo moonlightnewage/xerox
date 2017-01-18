@@ -9,33 +9,36 @@
                 display: table
                 float: left
                 .label
-                    //display: inline-block
                     overflow: hidden
             .icons
                 float: right
                 background-color: #fff
                 padding: 5px 10px
-                .icon
+                .icon-wrapper
+                    width: 25px
+                    height: 25px
                     border: 1px solid #fff
-                    padding: 5px
+                    display: inline-block
+                    position: relative
                     cursor: pointer
-                .icon-rect
-                    +s(rect-white)
-                    border: 1px solid #fff
                     &:hover
                         border: 1px solid $border-gray
-                        +s(rect-gray)
+                        .icon-rect
+                            +s(rect-gray)
+                        .icon-lines
+                            +s(lines-gray)
                     &.active
                         border: 1px solid $border-gray
-                        +s(rect-gray)
-                .icon-lines
-                    +s(lines-white)
-                    &:hover
-                        border: 1px solid $border-gray
-                        +s(lines-gray)
-                    &.active
-                        border: 1px solid $border-gray
-                        +s(lines-gray)
+                        .icon-rect
+                            +s(rect-gray)
+                        .icon-lines
+                            +s(lines-gray)
+                    .icon-rect
+                        +s(rect-white)
+                        +vcenter
+                    .icon-lines
+                        +s(lines-white)
+                        +vcenter
                         
         // END -- Content navigation
         
