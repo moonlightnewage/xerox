@@ -19,49 +19,40 @@ body
     width: 100%
     margin: 15px 0
     padding: 10px
-    &.highlighted
+    &.is-active
         background-color: $bg-light
         border-color: $bg-light
             
     .section__meta-top
         +clr
         .section__trigger
-            @extend %btn
             width: 15px
             height: 15px
             padding: 10px
-            display: inline-block
-            position: relative
-            cursor: pointer
             transition: 0.5s
-            &.up
+            &.is-up
                 transform: rotateX(180deg)
-            .icon-arrow-down
-                +s(arrow-down-gray)
-                +vcenter
+            
         .section__heading
-            display: inline-block
-            margin-left: 15px
-            overflow: hidden
             font-family: $font-bold
             font-size: em(15, 13)
-        .section__btn
-            @extend %btn
-            float: right
+            margin-left: 15px
             display: inline-block
+            overflow: hidden
+        .section__btn
+            float: right
         
     .section__block            
         .section__nav
             margin-top: 8px
             +clr
-            .item
-                display: inline-block
+            .section__item
+                display: table
                 height: 30px
-                .label
-                    @extend %label
+                float: left
     
         .section__content
-            .no-data
+            .section__nodata
                 background-color: $bg-very-light
                 padding: 20px 55px
                 margin-top: 8px
@@ -70,47 +61,32 @@ body
 // END -- Styles for each SECTION
 
 // BEGIN -- Styles for page wrapper
-.page-wrapper
+.page
     flex: 1 0 auto
     +clr
-    .page-header
+    .page__header
         margin: 25px 20px 10px
         +clr
-        .page-header__info
+        .page__info
             float: left
-            .icon-wrapper
-                display: inline-block
-                .icon-folder-double
-                    +s(folder-double)
-            .page-header__heading
+            .page__heading
                 display: inline-block
                 padding: 0 15px
-                .page-header__title
+                .page__title
                     font-family: $font-regular
                     font-size: em(20, 13)
                     font-weight: 300
                     text-transform: uppercase
-        .page-header__btn
+        .page__btn
             float: right
-            .btn
-                @extend %btn
-                width: 32px
-                height: 32px
-                position: relative
-                .icon-sliders
-                    +s(sliders-gray)
-                    +vcenter
-                .icon-star
-                    +s(star-gray)
-                    +vcenter
 
-    .page-main
+    .page__main
         width: percentage(730/1230)
         margin-left: 20px
         margin-right: 10px
         float: left
 
-    .page-aside
+    .page__aside
         width: percentage(450/1230)
         margin-right: 20px
         float: right

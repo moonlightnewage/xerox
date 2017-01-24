@@ -1,12 +1,12 @@
 .header
-    .header__top-block
+    .header__block-top
         +clr
         .header__logo
             float: left
             width: percentage(220/1230)
             padding: 15px 0 15px 20px
 
-        .search-form
+        .header__search-form
             width: percentage(645/1230)
             height: 30px
             padding: 20px 0
@@ -34,29 +34,15 @@
                         height: 100%
                         margin: 0
                         +clr
-                        .btn
-                            background-color: #fff
-                            border-left: 1px solid #dcdee0
-                            float: left
-                            position: relative
+                        .button
                             width: 28px
                             height: 28px
-                        .icon-arrow-down_large
-                            +s(arrow-down_large)
-                            +vcenter
-                        .icon-search
-                            +s(search)
-                            +vcenter
-            .icon-wrapper
-                width: 16px
+                            background-color: #fff
+                            border-left: 1px solid $border-gray
+                            float: left
+                            
+            .icon
                 height: 30px
-                margin-left: 15px
-                float: left
-                position: relative
-                cursor: pointer
-                .icon-settings
-                    +s(settings-gray)
-                    +vcenter
 
         .user
             float: right
@@ -64,28 +50,23 @@
             width: percentage(360/1230)
             +clr
             
-            .user__icon
-                +s(user-gray)
+            .icon
                 float: right
-                cursor: pointer
             .user__login
                 float: right
                 font-size: em(12, 13)
                 margin: 10px
             .user__logout
-                @extend %btn
-                border: 1px solid #dcdee0
-                float: right
                 margin-top: 8px
+                float: right
                 
-    .top-nav
-        border: 1px solid #dcdee0
+    .header__nav-top
+        border: 1px solid $border-gray
         ul
             +clr
             .top-nav__item
-                float: left
                 padding: 12px 20px
-                
+                float: left
                 &:first-of-type
                     padding-left: 30px
                     padding-right: 30px
@@ -94,54 +75,42 @@
                 &.active
                     background-color: $bg-dark
                     cursor: pointer
-                    .top-nav__item-text
+                    .top-nav__item-content
                         .text
-                            color: #fff
-                        .icon-wrapper
-                            .icon-window
+                            .text__simple
+                                color: #fff
+                        .icon
+                            .icon__window-gray
                                 +s(window-white)
-                            .icon-file
+                            .icon__file_gray
                                 +s(file-white)
-                            .icon-stack
+                            .icon__stack-gray
                                 +s(stack-white)
-                            .icon-star
+                            .icon__star-gray
                                 +s(star-white)
-
                             
-                .top-nav__item-text
+                .top-nav__item-content
                     text-decoration: none
-                    display: block
-                    padding: 6px 10px
+                    display: table
                     .text
-                        +vertical
-                        text-transform: uppercase
-                        font-size: em(12, 13)
-                        color: $dark-gray
-                    .extra
-                        padding: 0 5px
-                        margin-left: 3px
-                        background-color: #ff6c32
-                        border: none
-                        border-radius: 10px
-                        font-family: $font-regular
-                        font-size: em(10, 13)
-                        font-weight: 400
-                        color: #fff
-                    .icon-wrapper
+                        display: table-cell
+                        vertical-align: middle
+                        .text__simple
+                            text-transform: uppercase
+                            font-size: em(12, 13)
+                            color: $dark-gray
+                        .text__extra
+                            padding: 0 5px
+                            margin-left: 3px
+                            background-color: #ff6c32
+                            border: none
+                            border-radius: 10px
+                            font-family: $font-regular
+                            font-size: em(10, 13)
+                            font-weight: 400
+                            color: #fff
+                    .icon
                         width: 26px
                         height: 24px
-                        position: relative
                         margin-right: 15px
-                        .icon-window
-                            +s(window-gray)
-                            +vcenter
-                        .icon-file
-                            +s(file_gray)
-                            +vcenter
-                        .icon-stack
-                            +s(stack-gray)
-                            +vcenter
-                        .icon-star
-                            +s(star-gray)
-                            +vcenter
         

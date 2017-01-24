@@ -2,8 +2,8 @@ export default function selectNames(step) {
     var letters = $('a[data-letter]')
         , users = document.querySelectorAll('li.user')
         , options = document.querySelectorAll('.membership .multiple-select__list li')
-        , step, arrowLeft = $('.membership .icon-arrow-left')
-        , arrowRight = $('.membership .icon-arrow-right');
+        , step, arrowLeft = $('.membership .icon__arrow-left')
+        , arrowRight = $('.membership .icon__arrow-right');
     // Showing step number of users
     $(users).hide();
     for (var i = 0; i < step; i++) {

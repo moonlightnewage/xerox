@@ -4,31 +4,29 @@ export default function hover() {
     $(tableRows).each(function () {
         var self = $(this);
         $(self).wrap('<div class="row__wrapper"></div>');
-        $(self).parent().append('<div class="additional"></div>');
+        $(self).parent().append('<div class="pop-up"></div>');
 
         
-        additionalBlock = $(self).parent().find('.additional');
+        additionalBlock = $(self).parent().find('.pop-up');
         $(additionalBlock).hide();
         
         //        Adding icons
-        $(additionalBlock).append('<span class="icon icon-bell"></div>');
-        $(additionalBlock).append('<span class="icon icon-sliders"></div>');
-        $(additionalBlock).append('<span class="icon icon-star"></div>');
-        $(additionalBlock).append('<span class="icon icon-settings"></div>');
+        $(additionalBlock).append('<div class="icon"><span class="icon__bell-white"></span></div>');
+        $(additionalBlock).append('<div class="icon"><span class="icon__sliders-white"></span></div>');
+        $(additionalBlock).append('<div class="icon"><span class="icon__star-white"></span></div>');
+        $(additionalBlock).append('<div class="icon"><span class="icon__settings-white"></span></div>');
         
-        //        Wrapping icons
-        $(additionalBlock).find('.icon').wrap('<div class="icon__wrapper"></div>');
         
         //        Hover events
         $(self).parent().on('mouseover', function (e) {
             e.stopPropagation();
-            $(this).addClass('highlighted');
-            $(this).find('.additional').show();
+            $(this).addClass('is-active');
+            $(this).find('.pop-up').show();
         });
         $(self).parent().on('mouseout', function (e) {
             e.stopPropagation();
-            $(this).removeClass('highlighted');
-            $(this).find('.additional').hide();
+            $(this).removeClass('is-active');
+            $(this).find('.pop-up').hide();
         });
     });
 } 

@@ -2,43 +2,27 @@
     .section__block
         
         // BEGIN -- Content navigation
-        
         .section__nav
-            +clr
-            .item
-                display: table
-                float: left
-                .label
-                    overflow: hidden
-            .icons
+            .section__icons
                 float: right
                 background-color: #fff
                 padding: 5px 10px
-                .icon-wrapper
+                .icon
                     width: 25px
                     height: 25px
                     border: 1px solid #fff
-                    display: inline-block
-                    position: relative
-                    cursor: pointer
                     &:hover
                         border: 1px solid $border-gray
-                        .icon-rect
+                        .icon__rect-white
                             +s(rect-gray)
-                        .icon-lines
+                        .icon__lines-white
                             +s(lines-gray)
                     &.active
                         border: 1px solid $border-gray
-                        .icon-rect
+                        .icon__rect-white
                             +s(rect-gray)
-                        .icon-lines
+                        .icon__lines-white
                             +s(lines-gray)
-                    .icon-rect
-                        +s(rect-white)
-                        +vcenter
-                    .icon-lines
-                        +s(lines-white)
-                        +vcenter
                         
         // END -- Content navigation
         
@@ -63,18 +47,15 @@
                                         color: #fff
                                     .text
                                         color: #fff
-                    &.highlighted
+                    &.is-active
                         background-color: $hover-gray
                     .row
                         display: flex
                         cursor: pointer
-
                         .col-left
-                            .icon-folder-single
-                                +s(folder-single)
                             .cell
                                 .title
-                                    @extend %link
+                                    @extend .link
                                     font-size: em(15, 13)
                                 .text
                                     font-size: em(10, 13)
@@ -83,7 +64,7 @@
                         .col-right
                             display: flex
                             .cell-owner
-                                @extend %link
+                                @extend .link
                                 font-size: 1em
                             .cell-date
                                 font-family: $font-bold
@@ -93,31 +74,17 @@
                                 font-family: $font-regular
                                 font-size: 1em
                                 font-weight: 400
-                    .additional
+                    .pop-up
                         position: absolute
                         z-index: 999
                         right: 0
                         background-color: $hover-gray
                         opacity: 0.9
-                        .icon__wrapper
+                        .icon
                             height: 100%
-                            display: inline-block
-                            cursor: pointer
-                            position: relative
                             &:hover
                                 background-color: $bg-dark
-                            .icon
-                                display: inline-block
-                                overflow: hidden
-                                +vcenter
-                            .icon-bell
-                                +s(bell-white)
-                            .icon-sliders
-                                +s(sliders-white)
-                            .icon-star
-                                +s(star-white)
-                            .icon-settings
-                                +s(settings-white)
+                            
 
                                 
             // END -- Content table - general
@@ -136,7 +103,7 @@
                         font-size: em(10, 13)
                         padding: 8px 0
                         margin-left: 40px
-                        .icon-arrow-down
+                        .arrow-down-gray
                             +s(arrow-down-gray)
                             cursor: pointer
                             margin-left: 7px
@@ -157,23 +124,22 @@
                         flex-direction: row
                         justify-content: space-between
                         padding: 10px 0
-
                         .col-left
                             .icon-folder-single
                                 margin: 0px 8px 10px 8px
                             .cell
                                 display: inline-block
-
+                                overflow: hidden
                         .col-right
                             justify-content: space-between
                             .cell
                                 display: inline-block
                                 width: 70px
-                    .additional
+                    .pop-up
                         top: 0
-                        height: 53px
-                        .icon__wrapper
-                            width: 65px
+                        height: 60px
+                        .icon
+                            width: 60px
                             padding: 15px
 
                                 
@@ -191,7 +157,7 @@
                     display: none
             
             .body
-                flex-direction: row               
+                flex-direction: row
                 .row__wrapper
                     cursor: pointer
                     width: 30%
@@ -221,13 +187,12 @@
                             .cell
                                 padding: 5px
                                 margin: 0 auto
-                    .additional
+                    .pop-up
                         bottom: 0
                         width: 100%
                         height: 30%
-                        .icon__wrapper
+                        .icon
                             width: 25%
                             text-align: center
-                            padding-top: 10px
 
                 // END -- Content table -columns

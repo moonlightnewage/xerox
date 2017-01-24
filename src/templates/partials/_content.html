@@ -1,14 +1,14 @@
 {% import "data/content.html" as data %}
 
-<section class="section content highlighted">
+<section class="section content is-active">
     <!--Section meta BEGIN-->
     <div class="section__meta-top">
-      <div class="section__trigger">
-       <span class="icon icon-arrow-down">
+      <div class="btn icon section__trigger">
+       <span class="icon__arrow-down-gray">
        </span>
         </div>
         <h1 class="section__heading">Content</h1>
-        <button class="section__btn">Edit</button>
+        <button class="btn section__btn">Edit</button>
     </div>
     <!--Section meta END-->
     
@@ -16,7 +16,7 @@
     <div class="section__block">
 <!-- Section navigation BEGIN-->
         <div class="section__nav">
-          <div class="item">
+          <div class="section__item">
            <span class="label">Show</span>
             <select class="select">
                 <option value="0">All Types</option>
@@ -24,7 +24,7 @@
                 <option value="2">Type 2</option>
             </select>
             </div> 
-            <div class="item">
+            <div class="section__item">
             <span class="label">Add</span>
             <select class="select" id="calendar">
                 <option value="0">Calendar</option>
@@ -32,9 +32,9 @@
                 <option value="2">Calendar</option>
             </select>
             </div>
-            <div class="icons"> 
-                <div class="icon-wrapper"><span class="icon icon-rect"></span></div>
-                <div class="icon-wrapper"><span class="icon icon-lines"></span></div>
+            <div class="section__icons"> 
+                <div class="icon"><span class="icon__rect-white"></span></div>
+                <div class="icon"><span class="icon__lines-white"></span></div>
             </div>
         </div>
 <!-- Section navigation END-->
@@ -43,7 +43,7 @@
         <div class="section__table" data-style="">
             <div class="head">
                 <div class="col-left">
-                    <div class="head__elem">Title<span class="icon icon-arrow-down"></span></div>
+                    <div class="head__elem">Title<span class="icon arrow-down"></span></div>
                 </div>
                 <div class="col-right">
                     <div class="head__elem owner">Owner</div>
@@ -55,7 +55,9 @@
                {% for item in data.content_table %}
                 <div class="row">
                     <div class="col-left">
-                        <div class="cell icon icon-folder-single"></div>
+                        <div class="cell icon">
+                            <span class="icon__folder-single"></span>
+                        </div>
                         <div class="cell cell-heading"> <a href="#!" class="title">{{item.title}}</a>
                             <p class="text">{{item.text}}</p>
                         </div>

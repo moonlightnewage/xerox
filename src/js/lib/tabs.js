@@ -7,8 +7,8 @@ export function tabMenu () {
 
 export function tabContent () {
     var contentItem = $('.content .icons .icon'),
-        iconRect = $('.content .icons .icon-rect'),
-        iconLines = $('.content .icons .icon-lines'),
+        iconRect = $('.content .section__icons .icon__rect-white'),
+        iconLines = $('.content .section__icons .icon__lines-white'),
         table = $('.content .section__table');
     
     $(iconLines).parent().addClass('active');

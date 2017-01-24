@@ -1,5 +1,5 @@
 // buttons
-%btn
+.btn
     font-family: $font-common
     font-size: em(11, 13)
     font-weight: 600
@@ -8,76 +8,99 @@
     border-radius: 45px
     padding: 2px 12px
     background-color: #fff
+    display: inline-block
    
 // links
-%link
+.link
     font-family: $font-bold
-    text-decoration: none
     color: $dark-blue
+    text-decoration: none
 
 // labels
-%label
+.label
     font-size: em(12, 13)
+    padding: 0 15px
     display: table-cell
     vertical-align: middle
-    padding: 0 15px
-// icons
-.icon
-    display: inline-block
-    //background-image: url('../img/sprite.png')
-    //background-repeat: no-repeat
-    //overflow: hidden
-    //text-align: center
+    overflow: hidden
 
 // selects
 .multiple-select
-    display: inline-flex
-    position: relative
     height: 30px
-    cursor: pointer
     border: 1px solid #fff
+    position: relative
+    cursor: pointer
     +clr
     .multiple-select__placeholder
-        +vertical
+        width: 100px
         height: 100%
-        width: 100%
-        overflow: hidden
         background-color: #fff
         float: left
-        padding: 0 10px
-        font-family: $font-bold
-        font-size: 1em
+        position: relative
+        overflow: hidden
+        .multiple-select__placeholder-text
+            font-family: $font-bold
+            font-size: 1em
+            position: absolute
+            left: 20%
+            top: 50%
+            transform: translate(-20%, -50%)
             
     .multiple-select__list
+        width: 100%
+        background-color: #fff
+        border: 1px solid $border-gray
+        padding: 10px 15px
         position: absolute
         top: 35px
         left: 0
         z-index: 999
-        width: 100%
-        background-color: #fff
-        padding: 10px 15px
-        border: 1px solid $border-gray
         li
-            list-style: none
             font-family: $font-regular
             font-weight: 400
             padding: 8px 0 10px
+            list-style: none
             cursor: pointer
     .multiple-select__switcher
         height: 100%
         float: left
         overflow: hidden
-        .icon-wrapper
+        .icon
             background-color: #fff
             width: 14px
             height: 15px
-            position: relative
-            .icon-arrow-up
+            display: block
+            .icon__arrow-up
                 +s(arrow-up-gray)
                 position: absolute
-                bottom: 3px
-            .icon-arrow-down
+                bottom: 2px
+            .icon__arrow-down
                 +s(arrow-down-gray)
                 position: absolute
-                top: 1px
+                top: 2px
             
+// icons in blocks
+@each $s-icon in $s-icons 
+    .icon .icon__#{$s-icon}
+        +s($s-icon)
+        +vcenter
+
+.icon
+    display: inline-block
+    position: relative
+    width: 37px
+    height: 37px
+    cursor: pointer
+
+// icons in buttons
+@each $s-button in $s-buttons
+    .button .button__#{$s-button}
+        +s($s-button)
+        +vcenter
+.button
+    width: 32px
+    height: 32px
+    position: relative
+    cursor: pointer
+
+    

@@ -6,35 +6,19 @@
             margin-top: 8px
             text-align: center
             .link
-                @extend %link
                 margin-right: 3px
         .section__nav
             margin: 15px 0 7px 0
-            +clr
-            .item
-                display: table
-                float: left
-                .label
-                    overflow: hidden
-                .multiple-select
-                    border: 1px solid $border-gray
-            .icons
+            .multiple-select
+                border: 1px solid $border-gray
+            .section__icons
                 float: right
                 display: inline-block
                 overflow: hidden
-                .icon-wrapper
-                    display: inline-block
-                    width: 30px
-                    height: 30px
-                    cursor: pointer
-                    position: relative
-                    @extend %btn
-                    .icon
-                        +vcenter
-                    .icon-arrow-left
-                        +s(arrow-left)
-                    .icon-arrow-right
-                        +s(arrow-right)
+                .icon
+                    width: 32px
+                    height: 32px
+                    border: 1px solid $border-gray
     
         .section__content
             .users
@@ -49,25 +33,12 @@
                         float: left
                         display: inline-block
                         padding: 5px 0 0 5px
-                        .link
-                            @extend %link 
-                    .icon-wrapper
+                    .icon
                         float: left
-                        display: inline-block
                         width: 25px
                         height: 25px
-                        position: relative
-                        .icon-user-off
-                            +s(user-off)
-                        .icon-user-on
-                            +s(user-on)
-                        .icon-mail
-                            +s(Mail)
-                            +vcenter
-                            cursor: pointer
                     .user__contact
                         float: right
-                    
                     .user__info
                         +vertical
                         float: right

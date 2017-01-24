@@ -2,50 +2,58 @@
 
 <header class="header">
 <!--Top block BEGIN-->
-<div class="header__top-block">
+<div class="header__block-top">
 <!--   Logo BEGIN-->
     <a href="#" class="header__logo"><img src="img/header-logo.png" alt="Duracell"></a>
 <!--   Logo END-->
    
 <!--Search form BEGIN-->
-    <form action="" class="search-form">
+    <form action="" class="header__search-form">
         <div class="search">
             <div class="search__input">
                 <input type="text" placeholder="Search">
                 <div class="search__btn">
-                    <button class="btn"><span class="icon icon-arrow-down_large"></span></button>
-                    <button class="btn"><span class="icon icon-search"></span></button>
+                    <button class="button">
+                        <span class="button__arrow-down_large"></span>
+                    </button>
+                    <button class="button">
+                        <span class="button__search"></span>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="icon-wrapper"><span class="icon icon-settings"></span></div>
+        <div class="icon"><span class="icon__settings-gray"></span></div>
     </form>
 <!--Search form END-->
 
 <!--User block BEGIN-->
     <div class="user">
-        <button class="user__logout">Log out</button>
+        <button class="user__logout btn">Log out</button>
         <div class="user__login">emma.davidson@caterptillar.com</div>
-        <div class="icon user__icon"></div>
+        <div class="icon">
+            <span class="icon__user-gray"></span>
+        </div>
     </div>
 <!--User block END-->
 </div>
 <!--Top block BEGIN-->
 
 <!--Top navigation BEGIN-->
-    <nav class="top-nav">
+    <nav class="header__nav-top">
         <ul>
            {% for item in items.top_nav %}
             <li class="top-nav__item">
-                
-                <a href="#" class="top-nav__item-text">
-                    <span class="icon-wrapper">
-                        <span class="icon icon-{{item.icon}}"></span>
+                <a href="#" class="top-nav__item-content">
+                    <span class="icon">
+                        <span class="icon__{{item.icon}}"></span>
                     </span>
-                    <span class="text">{{item.text}}</span>
-                    {% if item.extra %}<span class="extra">{{item.extra}}</span>{% endif %}
+                    <span class="text">
+                        <span class="text__simple">{{item.text}}</span>
+                            {% if item.extra %}
+                            <span class="text__extra">{{item.extra}}</span>
+                    </span>
+            {% endif %}
                 </a>
-                
             </li>
             {% endfor %}
         </ul>
