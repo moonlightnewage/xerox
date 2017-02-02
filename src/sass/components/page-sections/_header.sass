@@ -1,0 +1,41 @@
+.header
+    width: 100%
+    height: 65px
+    padding: 0 23px
+    &__logo
+        width: percentage(225/1230)
+        height: 100%
+        display: inline-block
+        vertical-align: top
+        +vertical
+        text-align: left
+    &__search
+        width: percentage(665/1230)
+        height: 100%
+        display: inline-block
+        position: relative
+    &__user
+        width: percentage(330/1230)
+        height: 100%
+        display: inline-block
+        position: relative
+        text-align: right
+    &__user_inner
+        width: 100%
+        height: 37px
+        +vcenter
+    &__login
+        height: 100%
+        display: inline-block
+        overflow: hidden
+    &__login_inner
+        font-size: em(12, 13)
+        color: $dark-gray
+        text-decoration: none
+        line-height: 37px
+        padding: 0 11px
+    &__logout
+        height: 100%
+        line-height: 37px
+        display: inline-block
+        overflow: hidden

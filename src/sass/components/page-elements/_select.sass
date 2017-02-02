@@ -1,0 +1,47 @@
+.select
+    height: 30px
+    background-color: #fff
+    border: 1px solid $bg-light
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    +clr
+    &__placeholder
+        width: 100px
+        height: 100%
+        float: left
+    &__text
+        font-family: $font-bold
+        font-size: 1em
+        line-height: 30px
+        margin-left: 13px
+    &__list
+        width: 100%
+        background-color: #fff
+        border: 1px solid $bg-light
+        padding: 10px 0
+        position: absolute
+        left: 0
+        top: 35px
+        z-index: 9
+        li
+            height: 30px
+            padding-left: 13px
+            font-family: $font-regular
+            font-weight: 400
+            line-height: 30px
+            &:hover
+                background-color: $bg-very-light
+                font-weight: 600
+    &__switcher
+        height: 100%
+        float: right
+    &__icon
+        width: 20px
+        height: 50%
+        display: block
+.icon__arrow-up-gray_select
+    top: 70%
+.icon__arrow-down-gray_select
+    top: 30%

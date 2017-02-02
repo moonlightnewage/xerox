@@ -1,0 +1,299 @@
+.content
+    width: 100%
+    &__icons
+        background-color: #fff
+    &__icon
+        width: 25px
+        height: 25px
+        border: 1px solid #fff
+        &:hover, &.is-active
+            border: 1px solid $border-gray
+            .icon__rect-white
+                +s(rect-gray)
+            .icon__lines-white
+                +s(lines-gray)
+    &__table
+        width: 100%
+        background-color: #fff
+    &__table-col_left
+        width: percentage(495/715) - 1%
+        display: inline-block
+    &__table-col_right
+        width: percentage(220/715) - 1%
+        display: inline-block
+    &__table-head
+        border-bottom: 1px solid $border-gray
+        height: 26px
+        margin: 0 14px
+    &__head-elem
+        width: calc(100% / 3  - 1%)
+        height: 26px
+        display: inline-block
+        font-size: em(10, 13)
+    &__head-elem_title
+        padding-left: 40px
+        display: inline-block
+        vertical-align: middle
+    &__icon_head-elem
+        width: 20px
+        height: calc(100% - 1px)
+        vertical-align: middle
+    &__table-row
+        height: 60px
+        border-bottom: 1px solid $border-gray
+        margin: 0 14px
+    &__table-cell
+        width: calc(100% / 3  - 1%)
+        display: inline-block
+        vertical-align: middle
+        font-family: $font-regular
+        &_icon
+            width: percentage(32/495)
+        &_heading
+            width: percentage(455/495)
+    &__text_table-cell
+        font-family: $font-common
+        font-size: em(10, 13)
+    &__link_table-cell
+        font-size: em(15, 13)
+    &__container
+        position: relative
+        &:hover
+            background-color: $hover-gray
+            .content__table-row
+                border: none
+            .content__table-cell_heading, .content__link_table-cell
+                color: #fff
+    &__pop-up
+        position: absolute
+        bottom: 0
+        right: 0
+        width: percentage(255/715)
+        height: 100%
+    &__icon_pop-up
+        background: $hover-gray
+        width: 25%
+        height: 100%
+        text-align: center
+        &:hover
+            background: $bg-dark
+        
+    &__table[data-style="rows"]
+        padding-bottom: 26px
+        .content__table-row
+            +vertical
+            font-size: 1em
+            text-align: left
+
+    &__table[data-style="columns"]
+        .content__table-head
+            display: none
+        .content__table-col_left
+            width: 100%
+            height: 90%
+            display: block
+        .content__table-col_right
+            width: 100%
+            height: 10%
+            display: block
+            text-align: center
+        .content__container
+            width: calc(100% / 3 - 2%)
+            min-width: 250px
+            min-height: 160px
+            display: inline-block
+            vertical-align: top
+            margin: 20px 5px
+            &:hover
+                .content__table-row
+                    border: none
+        .content__table-row
+            border-top: 1px solid $border-gray
+            padding: 10px 0
+            min-height: 160px
+        .content__table-cell
+            &_icon
+                vertical-align: top
+                width: 15%
+            &_heading
+                width: 83%
+        .content__pop-up
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 100%
+            height: 30%
+            
+
+            
+            
+            
+//        // BEGIN -- Content table - general   
+//                
+//        .section__table
+//            background-color: #fff
+//            width: 100%
+//
+//            .body
+//                display: flex
+//                flex-wrap: wrap
+//                .row__wrapper
+//                    position: relative
+//                    border-bottom: 1px solid $border-gray
+//                    &:hover
+//                        .row
+//                            .col-left
+//                                .cell
+//                                    .title
+//                                        color: #fff
+//                                    .text
+//                                        color: #fff
+//                    &.is-active
+//                        background-color: $hover-gray
+//                    .row
+//                        display: flex
+//                        cursor: pointer
+//                        .col-left
+//                            .cell
+//                                .title
+//                                    @extend .link
+//                                    font-size: em(15, 13)
+//                                .text
+//                                    font-size: em(10, 13)
+//                                    color: $light-gray
+//
+//                        .col-right
+//                            display: flex
+//                            .cell-owner
+//                                @extend .link
+//                                font-size: 1em
+//                            .cell-date
+//                                font-family: $font-bold
+//                                font-size: 1em
+//                                font-weight: 600
+//                            .cell-size
+//                                font-family: $font-regular
+//                                font-size: 1em
+//                                font-weight: 400
+//                    .pop-up
+//                        position: absolute
+//                        z-index: 999
+//                        right: 0
+//                        background-color: $hover-gray
+//                        opacity: 0.9
+//                        .icon
+//                            height: 100%
+//                            &:hover
+//                                background-color: $bg-dark
+//                            
+//
+//                                
+//            // END -- Content table - general
+//            
+//
+//        // BEGIN -- Content table - rows    
+//                
+//        .section__table[data-style="rows"]
+//            padding: 0 10px 10px 10px
+//            .head
+//                display: flex
+//                justify-content: space-between
+//                border-bottom: 1px solid $border-gray
+//                .col-left
+//                    .head__elem
+//                        font-size: em(10, 13)
+//                        padding: 8px 0
+//                        margin-left: 40px
+//                        .arrow-down-gray
+//                            +s(arrow-down-gray)
+//                            cursor: pointer
+//                            margin-left: 7px
+//                .col-right
+//                    .head__elem
+//                        display: inline-block
+//                        font-size: em(10, 13)
+//                        width: 68px
+//                        padding: 8px 0
+//
+//            
+//            .body
+//                flex-direction: column
+//                .row__wrapper
+//                    &:last-of-type
+//                        border-bottom: 1px solid #fff
+//                    .row
+//                        flex-direction: row
+//                        justify-content: space-between
+//                        padding: 10px 0
+//                        .col-left
+//                            .icon-folder-single
+//                                margin: 0px 8px 10px 8px
+//                            .cell
+//                                display: inline-block
+//                                overflow: hidden
+//                        .col-right
+//                            justify-content: space-between
+//                            .cell
+//                                display: inline-block
+//                                width: 70px
+//                    .pop-up
+//                        top: 0
+//                        height: 60px
+//                        .icon
+//                            width: 60px
+//                            padding: 15px
+//
+//                                
+//            // END -- Content table rows
+//
+//
+//        // BEGIN -- Content table - columns   
+//                
+//        .section__table[data-style="columns"]
+//            padding: 20px 10px 30px 10px
+//            .head
+//                height: 10px
+//                background-color: #fff
+//                & > *
+//                    display: none
+//            
+//            .body
+//                flex-direction: row
+//                .row__wrapper
+//                    cursor: pointer
+//                    width: 30%
+//                    padding: 20px 0 10px
+//                    margin: 10px
+//                    border-top: 1px solid $border-gray
+//                    &:hover
+//                            border-bottom: 1px solid #606568
+//                    .row
+//                        flex-direction: column
+//                        height: 100%
+//                        
+//                        .col-left
+//                            display: flex
+//                            flex-direction: row
+//                            flex: 1 0 auto
+//                            .icon-folder-single
+//                                margin: 0 10px
+//                            .cell-heading
+//                                width: 80%
+//
+//                        .col-right
+//                            flex-direction: row
+//                            flex: 0 0 auto
+//                            padding: 10px
+//                            height: 30%
+//                            .cell
+//                                padding: 5px
+//                                margin: 0 auto
+//                    .pop-up
+//                        bottom: 0
+//                        width: 100%
+//                        height: 30%
+//                        .icon
+//                            width: 25%
+//                            text-align: center
+//
+//                // END -- Content table -columns

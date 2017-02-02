@@ -1,7 +1,5 @@
-//BEGIN -- General Styles
 html
     height: 100%
-
 body
     background: #fff
     font-family: $font-common
@@ -10,86 +8,43 @@ body
     color: $dark-gray
     height: 100%
     overflow-y: scroll
-//END -- General Styles
-
-// BEGIN -- Styles for each SECTION
-.section
-    background-color: #fff
+.logo
+    width: 187px
+    height: 37px
+    display: inline-block
+    vertical-align: middle
+    +cover
+.icon
+    display: inline-block
+    position: relative
+    width: 37px
+    height: 37px
+    cursor: pointer
+.btn
+    font-family: $font-common
+    font-size: em(11, 13)
+    font-weight: 600
+    color: $dark-gray
     border: 1px solid $border-gray
-    width: 100%
-    margin: 15px 0
-    padding: 10px
-    &.is-active
-        background-color: $bg-light
-        border-color: $bg-light
-            
-    .section__meta-top
-        +clr
-        .section__trigger
-            width: 15px
-            height: 15px
-            padding: 10px
-            transition: 0.5s
-            &.is-up
-                transform: rotateX(180deg)
-            
-        .section__heading
-            font-family: $font-bold
-            font-size: em(15, 13)
-            margin-left: 15px
-            display: inline-block
-            overflow: hidden
-        .section__btn
-            float: right
-        
-    .section__block            
-        .section__nav
-            margin-top: 8px
-            +clr
-            .section__item
-                display: table
-                height: 30px
-                float: left
+    border-radius: 45px
+    padding: 2px 12px
+    background-color: #fff
+    display: inline-block
+.link
+    font-family: $font-bold
+    color: $dark-blue
+    text-decoration: none
+.label
+    font-size: em(12, 13)
+    padding: 0 15px
+    display: table-cell
+    vertical-align: middle
+    overflow: hidden
     
-        .section__content
-            .section__nodata
-                background-color: $bg-very-light
-                padding: 20px 55px
-                margin-top: 8px
-                text-align: center
-                         
-// END -- Styles for each SECTION
+@each $png-icon in $png-icons
+    .icon__#{$png-icon}
+        +s($png-icon)
+        +vcenter
 
-// BEGIN -- Styles for page wrapper
-.page
-    flex: 1 0 auto
-    +clr
-    .page__header
-        margin: 25px 20px 10px
-        +clr
-        .page__info
-            float: left
-            .page__heading
-                display: inline-block
-                padding: 0 15px
-                .page__title
-                    font-family: $font-regular
-                    font-size: em(20, 13)
-                    font-weight: 300
-                    text-transform: uppercase
-        .page__btn
-            float: right
-
-    .page__main
-        width: percentage(730/1230)
-        margin-left: 20px
-        margin-right: 10px
-        float: left
-
-    .page__aside
-        width: percentage(450/1230)
-        margin-right: 20px
-        float: right
-// END -- Styles for page wrapper
 
     

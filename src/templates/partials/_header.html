@@ -1,63 +1,45 @@
-{% import "data/data.html" as items %}
-
 <header class="header">
-<!--Top block BEGIN-->
-<div class="header__block-top">
-<!--   Logo BEGIN-->
-    <a href="#" class="header__logo"><img src="img/header-logo.png" alt="Duracell"></a>
-<!--   Logo END-->
+    <!--BEGIN - HEADER Logo-->
+    <div class="header__logo">
+        <a href="#" class="logo" style="background-image: url(img/header-logo.png)"></a>
+    </div>
+    <!--END - HEADER Logo-->
    
-<!--Search form BEGIN-->
-    <form action="" class="header__search-form">
-        <div class="search">
-            <div class="search__input">
-                <input type="text" placeholder="Search">
+    <!--BEGIN - HEADER Search form-->
+    <div class="header__search">
+        <form action="" class="search">
+            <div class="search__bar">
+                <input type="text" placeholder="Search" class="search__input">
                 <div class="search__btn">
-                    <button class="button">
-                        <span class="button__arrow-down_large"></span>
+                    <button class="icon search__button">
+                        <span class="icon__arrow-down-large"></span>
                     </button>
-                    <button class="button">
-                        <span class="button__search"></span>
+                    <button class="icon search__button">
+                        <span class="icon__search"></span>
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="icon"><span class="icon__settings-gray"></span></div>
-    </form>
-<!--Search form END-->
+            <div class="icon search__icon">
+                <span class="icon__settings-gray"></span>
+            </div>
+        </form>
+    </div>
+    <!--END - HEADER Search form-->
 
-<!--User block BEGIN-->
-    <div class="user">
-        <button class="user__logout btn">Log out</button>
-        <div class="user__login">emma.davidson@caterptillar.com</div>
-        <div class="icon">
-            <span class="icon__user-gray"></span>
+    <!--BEGIN - HEADER User info-->
+    <div class="header__user">
+        <div class="header__user_inner">
+           <div class="icon">
+                <span class="icon__user-gray"></span>
+            </div>
+            <div class="header__login">
+                <a href="#" class="header__login_inner">emma.davidson@caterptillar.com</a>
+            </div>
+            <div class="header__logout">
+                <button class="btn">Log out</button>
+            </div>
         </div>
     </div>
-<!--User block END-->
-</div>
-<!--Top block BEGIN-->
-
-<!--Top navigation BEGIN-->
-    <nav class="header__nav-top">
-        <ul>
-           {% for item in items.top_nav %}
-            <li class="top-nav__item">
-                <a href="#" class="top-nav__item-content">
-                    <span class="icon">
-                        <span class="icon__{{item.icon}}"></span>
-                    </span>
-                    <span class="text">
-                        <span class="text__simple">{{item.text}}</span>
-                            {% if item.extra %}
-                            <span class="text__extra">{{item.extra}}</span>
-                    </span>
-            {% endif %}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
-<!--Top navigation END-->
+    <!--END - HEADER User info-->
 </header>
 

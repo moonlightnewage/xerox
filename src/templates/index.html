@@ -3,61 +3,48 @@ title: Duracell
 --- 
 
 {% extends "layouts/_layout.html" %} {% block content %}
-<!--HEADER BEGIN-->
+<!--BEGIN HEADER-->
 {% include "partials/_header.html" %}
-<!--HEADER END-->
+<!--END HEADER-->
 
-<!--Page wrapper BEGIN-->
+<!--BEGIN NAVIGATION-->
+{% include "partials/_nav.html" %}
+<!-- END NAVIGATION-->
+
+<!--BEGIN PAGE-->
 <div class="page">
-    <!--Page header BEGIN-->
-    <header class="page__header">
-        <div class="page__info"> 
-           <div class="icon">
-               <span class="icon__folder-double"></span>
-           </div>
-            <div class="page__heading">
-                <h1 class="page__title">Cogniance, Inc. Home Page</h1>
-                <p class="page__text">PM, Eng & SQA document share and test file locations for Cogniance engagements</p>
-            </div>
-        </div>
-        <div class="page__btn"> 
-            <button class="btn button">
-                <span class="button__star-gray"></span>
-            </button> 
-            <button class="btn button">
-                <span class="button__sliders-gray"></span>
-            </button> 
-        </div>
-    </header>
-    <!--Page header END-->
-    
-    <!--MAIN BEGIN-->
+
+<!--BEGIN PAGE HEADER-->
+{% include "partials/_page-header.html" %}
+<!--END PAGE HEADER-->
+       
+    <!-- BEGIN MAIN-->
     <main class="page__main">
-        <!--Content section BEGIN-->
+        <!--BEGIN Content section-->
         {% include "partials/_content.html" %}
-        <!--Content section END-->
+        <!-- END Content section-->
         
-        <!--Calendar section BEGIN-->
+        <!--BEGIN Calendar section-->
         {% include "partials/_calendar.html" %}
-        <!--Calendar section END-->
+        <!--END Calendar section-->
     </main>
-    <!--MAIN END-->
+    <!--END MAIN-->
     
     <!--ASIDE BEGIN-->
     <aside class="page__aside">
-        <!--Shortcuts section BEGIN-->
+        <!--BEGIN Shortcuts section-->
         {% include "partials/_shortcuts.html" %}
-        <!--Shortcuts section END-->
-        <!--Membership section BEGIN-->
+        <!--END Shortcuts section-->
+        <!--BEGIN Membership section-->
         {% include "partials/_membership.html" %}
-        <!--Membership section END-->
+        <!--END Membership section-->
     </aside>
     <!--ASIDE END-->
 </div>
-<!--Page wrapper END-->
+<!--END PAGE-->
 
-<!--FOOTER BEGIN-->
+<!--BEGIN FOOTER-->
 {% include "partials/_footer.html" %}
-<!--FOOTER END-->
+<!--END FOOTER-->
  
  {% endblock %}

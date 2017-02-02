@@ -1,54 +1,63 @@
 {% import "data/membership.html" as data %}
-
 <section class="section membership">
-    <!--Section meta BEGIN-->
-        <div class="section__meta-top"> 
-           <div class="btn icon section__trigger"><span class="icon__arrow-down-gray"></span></div>
-            <h1 class="section__heading">Membership</h1>
-            <button class="btn section__btn">Edit</button>
+    <!--BEGIN - Section meta-->
+    <div class="section__topbar">
+        <div class="icon section__trigger">
+            <span class="icon__arrow-down-gray"></span>
         </div>
-    <!--Section meta END-->
-    
-    <!--Section block BEGIN-->
+        <h1 class="section__title">Membership</h1>
+        <button class="btn section__btn">Edit</button>
+    </div>
+    <!--END - Section meta-->
+    <!--BEGIN - Section block-->
     <div class="section__block">
-<!--       Section sort BEGIN-->
-        <div class="section__sort"> 
+        <!--BEGIN - Membership sort-->
+        <div class="membership__sort"> 
         {% for letter in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0-9','all'] %} 
-            <a href="#!" class="link" data-letter="{{letter}}">{{letter}}</a> 
+            <a href="#!" class="link membership__link" data-letter="{{letter}}">{{letter}}</a> 
         {% endfor %} 
         </div>
-<!--       Section sort END-->
-
-<!--       Section navigation BEGIN-->
+        <!--END - Membership sort-->
+        <!-- BEGIN - Section navigation-->
         <div class="section__nav"> 
-          <div class="section__item">
-           <span class="label">View</span>
-            <select class="select">
+          <div class="section__nav-item membership__nav-item">
+           <span class="label section__label">View</span>
+            <select class="select-simple">
                 <option value="0">1-8 of 14</option>
                 <option value="1">9-14 of 14</option>
             </select>
             </div>
-            <div class="section__icons"> 
-                <div class="btn icon"><span class="icon__arrow-left"></span></div> 
-                <div class="btn icon"><span class="icon__arrow-right"></span></div> 
+            <div class="section__icons membership__icons"> 
+                <div class="icon section__icon membership__icon">
+                    <span class="icon__arrow-left"></span>
+                </div> 
+                <div class="icon section__icon membership__icon">
+                    <span class="icon__arrow-right"></span>
+                </div> 
             </div>
         </div>
-<!--       Section navigation END-->
+        <!-- END - Section navigation-->
 
-<!--       Section content BEGIN-->   
-        <div class="section__content">
-            <ul class="users"> 
-               {% for user in data.users %}
-                <li class="user" data-name="{{user.name}}">
-                    <div class="icon"><span class="icon__user-{{user.status}}"></span></div>
-                    <span class="user__name"><a href="#!" class="link">{{user.name}}</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div>
-                    <span class="user__info">{{user.info}}</span>
-                </li> 
-                {% endfor %} 
-            </ul>
-        </div>
-<!--       Section content BEGIN--> 
+        <!--BEGIN - Membership users-->   
+        <ul class="membership__users"> 
+        {% for user in data.users %}
+            <li class="membership__user" data-name="{{user.name}}">
+                <div class="icon membership__icon_user">
+                    <span class="icon__user-{{user.status}}"></span>
+                </div>
+                <div class="membership__user-name">
+                    <a href="#!" class="link">{{user.name}}</a>
+                </div>
+                <div class="membership__user-info">
+                    <span class="membership__user-txt">{{user.info}}</span>
+                </div>
+                <div class="icon membership__user-contact">
+                    <span class="icon__mail"></span>
+                </div>
+            </li> 
+        {% endfor %} 
+        </ul>
+        <!--END - Membership users--> 
     </div>
-    <!--Section block END-->
+    <!--END - Section block-->
 </section>

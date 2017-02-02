@@ -1,29 +1,29 @@
 export function tabMenu () {
-    var menuItem = $('.top-nav__item');
+    var menuItem = $('.nav__item');
     $(menuItem).on('click', function(){
-        $(this).addClass('active').siblings().removeClass('active');
+        $(this).addClass('is-active').siblings().removeClass('is-active');
     });
 }
 
 export function tabContent () {
-    var contentItem = $('.content .icons .icon'),
-        iconRect = $('.content .section__icons .icon__rect-white'),
-        iconLines = $('.content .section__icons .icon__lines-white'),
-        table = $('.content .section__table');
+    var contentItem = $('.content__icon'),
+        iconRect = $('.icon__rect-white'),
+        iconLines = $('.icon__lines-white'),
+        table = $('.content__table');
     
-    $(iconLines).parent().addClass('active');
+    $(iconLines).parent().addClass('is-active');
     $(table).attr('data-style', 'rows');
     
     
     $(iconRect).on('click', function(e) {
         e.stopPropagation();
-        $(iconRect).parent().addClass('active').siblings().removeClass('active');
+        $(iconRect).parent().addClass('is-active').siblings().removeClass('is-active');
         $(table).attr('data-style', 'columns');
     });
     
     $(iconLines).on('click', function(e) {
         e.stopPropagation();
-        $(iconLines).parent().addClass('active').siblings().removeClass('active');
+        $(iconLines).parent().addClass('is-active').siblings().removeClass('is-active');
         $(table).attr('data-style', 'rows');
     });
     

@@ -1,0 +1,20 @@
+{% import "data/data.html" as items %}   
+<nav class="nav">
+    <ul class="nav__menu">
+    {% for item in items.top_nav %}
+        <li class="nav__item">
+            <a href="#" class="nav__link">
+                <span class="icon nav__icon">
+                    <span class="icon__{{item.icon}}"></span>
+                </span>
+                <span class="nav__text">
+                    <span class="nav__text_common">{{item.text}}</span>
+                    {% if item.extra %}
+                    <span class="nav__text_extra">{{item.extra}}</span>
+                    {% endif %}
+                </span>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</nav>

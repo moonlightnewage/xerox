@@ -1,0 +1,62 @@
+.section
+    width: 100%
+    background-color: #fff
+    border: 1px solid $border-gray
+    padding: 10px
+    margin-bottom: 15px
+    &.is-active
+        background-color: $bg-light
+        border-color: $bg-light
+    &__topbar
+        width: 100%
+        height: 30px
+        +vertical
+        font-size: 1em
+        text-align: left
+    &__trigger
+        width: 26px
+        height: 25px
+        border: 1px solid $border-gray
+        border-radius: 50%
+        transition: 0.5s
+        vertical-align: middle
+        &.is-up
+            transform: rotateX(180deg)
+    &__title
+        font-family: $font-bold
+        font-size: em(15, 13)
+        padding: 0 14px
+        vertical-align: middle
+        display: inline-block
+    &__btn
+        float: right
+    &__nav
+        width: 100%
+        height: 45px
+    &__nav-item
+        height: 100%
+        display: inline-block
+        +vertical
+        font-size: 1em
+        text-align: left
+    &__label
+        display: inline-block
+        vertical-align: middle
+    &__icons
+        width: 75px
+        float: right
+        height: 100%
+        +vertical
+    &__icon
+        vertical-align: middle
+    &__block
+        margin-top: 10px
+    &__content
+        width: 100%
+        height: 60px
+        background-color: $bg-very-light
+        +vertical
+        font-size: 1em
+    &__nodata
+        display: inline-block
+        vertical-align: middle

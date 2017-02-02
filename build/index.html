@@ -13,195 +13,211 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <!--HEADER BEGIN-->
+      <!--BEGIN HEADER-->
       <header class="header">
-        <!--Top block BEGIN-->
-        <div class="header__block-top">
-          <!--   Logo BEGIN-->
-          <a href="#" class="header__logo"><img src="img/header-logo.png" alt="Duracell"></a>
-          <!--   Logo END-->
-          <!--Search form BEGIN-->
-          <form action="" class="header__search-form">
-            <div class="search">
-              <div class="search__input"> <input type="text" placeholder="Search">
-                <div class="search__btn"> <button class="button">
-                        <span class="button__arrow-down_large"></span>
-                    </button> <button class="button">
-                        <span class="button__search"></span>
+        <!--BEGIN - HEADER Logo-->
+        <div class="header__logo">
+          <a href="#" class="logo" style="background-image: url(img/header-logo.png)"></a>
+        </div>
+        <!--END - HEADER Logo-->
+        <!--BEGIN - HEADER Search form-->
+        <div class="header__search">
+          <form action="" class="search">
+            <div class="search__bar"> <input type="text" placeholder="Search" class="search__input">
+              <div class="search__btn"> <button class="icon search__button">
+                        <span class="icon__arrow-down-large"></span>
+                    </button> <button class="icon search__button">
+                        <span class="icon__search"></span>
                     </button> </div>
+            </div>
+            <div class="icon search__icon"> <span class="icon__settings-gray"></span> </div>
+          </form>
+        </div>
+        <!--END - HEADER Search form-->
+        <!--BEGIN - HEADER User info-->
+        <div class="header__user">
+          <div class="header__user_inner">
+            <div class="icon"> <span class="icon__user-gray"></span> </div>
+            <div class="header__login"> <a href="#" class="header__login_inner">emma.davidson@caterptillar.com</a> </div>
+            <div class="header__logout"> <button class="btn">Log out</button> </div>
+          </div>
+        </div>
+        <!--END - HEADER User info-->
+      </header>
+      <!--END HEADER-->
+      <!--BEGIN NAVIGATION-->
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="#" class="nav__link"> <span class="icon nav__icon">
+                    <span class="icon__window-gray"></span> </span> <span class="nav__text">
+                    <span class="nav__text_common">Home</span> </span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> <span class="icon nav__icon">
+                    <span class="icon__file-gray"></span> </span> <span class="nav__text">
+                    <span class="nav__text_common">Recent</span> </span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> <span class="icon nav__icon">
+                    <span class="icon__stack-gray"></span> </span> <span class="nav__text">
+                    <span class="nav__text_common">My tasks</span> <span class="nav__text_extra">282</span> </span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> <span class="icon nav__icon">
+                    <span class="icon__star-gray"></span> </span> <span class="nav__text">
+                    <span class="nav__text_common">My favorites</span> </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- END NAVIGATION-->
+      <!--BEGIN PAGE-->
+      <div class="page">
+        <!--BEGIN PAGE HEADER-->
+        <header class="page__header">
+          <!--BEGIN - Page info-->
+          <div class="page__info">
+            <!--BEGIN - Page icon-->
+            <div class="icon page__icon"> <span class="icon__folder-double"></span> </div>
+            <!--END - Page icon-->
+            <!--BEGIN - Page heading-->
+            <div class="page__heading">
+              <div class="page__heading_inner">
+                <h1 class="page__title">Cogniance, Inc. Home Page</h1>
+                <h2 class="page__subtitle">PM, Eng & SQA document share and test file locations for Cogniance engagements</h2>
               </div>
             </div>
-            <div class="icon"><span class="icon__settings-gray"></span></div>
-          </form>
-          <!--Search form END-->
-          <!--User block BEGIN-->
-          <div class="user"> <button class="user__logout btn">Log out</button>
-            <div class="user__login">emma.davidson@caterptillar.com</div>
-            <div class="icon"> <span class="icon__user-gray"></span> </div>
+            <!--END - Page heading-->
           </div>
-          <!--User block END-->
-        </div>
-        <!--Top block BEGIN-->
-        <!--Top navigation BEGIN-->
-        <nav class="header__nav-top">
-          <ul>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__item-content"> <span class="icon">
-                        <span class="icon__window-gray"></span> </span> <span class="text">
-                        <span class="text__simple">Home</span> </a>
-            </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__item-content"> <span class="icon">
-                        <span class="icon__file_gray"></span> </span> <span class="text">
-                        <span class="text__simple">Recent</span> </a>
-            </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__item-content"> <span class="icon">
-                        <span class="icon__stack-gray"></span> </span> <span class="text">
-                        <span class="text__simple">My tasks</span> <span class="text__extra">282</span> </span>
-              </a>
-            </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__item-content"> <span class="icon">
-                        <span class="icon__star-gray"></span> </span> <span class="text">
-                        <span class="text__simple">My favorites</span> </a>
-            </li>
-          </ul>
-        </nav>
-        <!--Top navigation END-->
-      </header>
-      <!--HEADER END-->
-      <!--Page wrapper BEGIN-->
-      <div class="page">
-        <!--Page header BEGIN-->
-        <header class="page__header">
-          <div class="page__info">
-            <div class="icon"> <span class="icon__folder-double"></span> </div>
-            <div class="page__heading">
-              <h1 class="page__title">Cogniance, Inc. Home Page</h1>
-              <p class="page__text">PM, Eng & SQA document share and test file locations for Cogniance engagements</p>
-            </div>
-          </div>
-          <div class="page__btn"> <button class="btn button">
-                <span class="button__star-gray"></span>
-            </button> <button class="btn button">
-                <span class="button__sliders-gray"></span>
-            </button> </div>
+          <!--END - Page info-->
+          <!--BEGIN - Page buttons-->
+          <div class="page__btn"> <button class="btn icon page__button">
+            <span class="icon__star-gray"></span>
+        </button> <button class="btn icon page__button">
+            <span class="icon__sliders-gray"></span>
+        </button> </div>
+          <!--END - Page buttons-->
         </header>
-        <!--Page header END-->
-        <!--MAIN BEGIN-->
+        <!--END PAGE HEADER-->
+        <!-- BEGIN MAIN-->
         <main class="page__main">
-          <!--Content section BEGIN-->
+          <!--BEGIN Content section-->
           <section class="section content is-active">
-            <!--Section meta BEGIN-->
-            <div class="section__meta-top">
-              <div class="btn icon section__trigger"> <span class="icon__arrow-down-gray">
-       </span> </div>
-              <h1 class="section__heading">Content</h1> <button class="btn section__btn">Edit</button> </div>
-            <!--Section meta END-->
-            <!--Section block BEGIN-->
+            <!-- BEGIN - Section meta-->
+            <div class="section__topbar">
+              <div class="icon section__trigger"> <span class="icon__arrow-down-gray"></span> </div>
+              <h3 class="section__title">Content</h3> <button class="btn section__btn">Edit</button> </div>
+            <!--END - Section meta-->
+            <!-- BEGIN - Section block-->
             <div class="section__block">
-              <!-- Section navigation BEGIN-->
+              <!--BEGIN - Section navigation-->
               <div class="section__nav">
-                <div class="section__item"> <span class="label">Show</span> <select class="select">
+                <div class="section__nav-item"> <span class="label section__label">Show</span> <select class="select-simple">
                 <option value="0">All Types</option>
                 <option value="1">Type 1</option>
                 <option value="2">Type 2</option>
             </select> </div>
-                <div class="section__item"> <span class="label">Add</span> <select class="select" id="calendar">
+                <div class="section__nav-item"> <span class="label section__label">Add</span> <select class="select-simple" id="calendar">
                 <option value="0">Calendar</option>
                 <option value="1">Calendar</option>
                 <option value="2">Calendar</option>
             </select> </div>
-                <div class="section__icons">
-                  <div class="icon"><span class="icon__rect-white"></span></div>
-                  <div class="icon"><span class="icon__lines-white"></span></div>
+                <div class="section__icons content__icons">
+                  <div class="icon section__icon content__icon"> <span class="icon__rect-white"></span> </div>
+                  <div class="icon section__icon content__icon"> <span class="icon__lines-white"></span> </div>
                 </div>
               </div>
-              <!-- Section navigation END-->
+              <!--END - Section navigation-->
               <!--    Section content table BEGIN-->
-              <div class="section__table" data-style="">
-                <div class="head">
-                  <div class="col-left">
-                    <div class="head__elem">Title<span class="icon arrow-down"></span></div>
+              <div class="content__table" data-style="">
+                <div class="content__table-head">
+                  <div class="content__table-col_left">
+                    <div class="content__head-elem">
+                      <div class="content__head-elem_title">Title </div>
+                      <div class="icon content__icon_head-elem"> <span class="icon__arrow-down-gray"></span> </div>
+                    </div>
                   </div>
-                  <div class="col-right">
-                    <div class="head__elem owner">Owner</div>
-                    <div class="head__elem edited">Edited</div>
-                    <div class="head__elem size">Size</div>
+                  <div class="content__table-col_right">
+                    <div class="content__head-elem">Owner</div>
+                    <div class="content__head-elem">Edited</div>
+                    <div class="content__head-elem">Size</div>
                   </div>
                 </div>
-                <div class="body">
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
-                        <p class="text">DocuShare API used to populate a menu of available document classes</p>
+                <div class="content__table-body">
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">Mapping of CMIS Services to DocuShare/Falcon</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
-                      <div class="cell cell-date">12/18/14</div>
-                      <div class="cell cell-size">102Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">binouye</a>
+                      <div class="content__table-cell">12/18/14</div>
+                      <div class="content__table-cell">102Mb</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
-                        <p class="text">DocuShare API used to populate a menu of available document classes</p>
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">How Mobile Apps Authenticate with DocuShare</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
-                      <div class="cell cell-date">10/07/14</div>
-                      <div class="cell cell-size">90Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">binouye</a>
+                      <div class="content__table-cell">10/07/14</div>
+                      <div class="content__table-cell">90Mb</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">DocuShare Print and Email API</a>
-                        <p class="text">DocuShare API used to populate a menu</p>
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">DocuShare Print and Email API</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">davidson</a>
-                      <div class="cell cell-date">10/08/14</div>
-                      <div class="cell cell-size">8Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">davidson</a>
+                      <div class="content__table-cell">10/08/14</div>
+                      <div class="content__table-cell">8Mb</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">The CMIS Standard</a>
-                        <p class="text">DocuShare API used to populate a menu of available document classes</p>
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">The CMIS Standard</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">melisa</a>
-                      <div class="cell cell-date">10/09/14</div>
-                      <div class="cell cell-size">240Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">melisa</a>
+                      <div class="content__table-cell">10/09/14</div>
+                      <div class="content__table-cell">240Mb</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">Mapping of CMIS Services to DocuShare/Falcon</a>
-                        <p class="text">DocuShare API used to populate a menu of available document classes</p>
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">Mapping of CMIS Services to DocuShare/Falcon</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">binouye</a>
-                      <div class="cell cell-date">12/18/14</div>
-                      <div class="cell cell-size">102Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">binouye</a>
+                      <div class="content__table-cell">12/18/14</div>
+                      <div class="content__table-cell">102Mb</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-left">
-                      <div class="cell icon"> <span class="icon__folder-single"></span> </div>
-                      <div class="cell cell-heading"> <a href="#!" class="title">How Mobile Apps Authenticate with DocuShare</a>
-                        <p class="text">DocuShare API used to populate a menu of available document classes</p>
+                  <div class="content__table-row">
+                    <div class="content__table-col_left">
+                      <div class="icon content__table-cell content__table-cell_icon"> <span class="icon__folder-single"></span> </div>
+                      <div class="content__table-cell content__table-cell_heading"> <a href="#!" class="link content__link_table-cell">How Mobile Apps Authenticate with DocuShare</a>
+                        <p class="content__text_table-cell">DocuShare API used to populate a menu of available document classes</p>
                       </div>
                     </div>
-                    <div class="col-right"> <a href="#!" class="cell cell-owner">glynn</a>
-                      <div class="cell cell-date">11/23/14</div>
-                      <div class="cell cell-size">45Mb</div>
+                    <div class="content__table-col_right"> <a href="#!" class="link content__table-cell">glynn</a>
+                      <div class="content__table-cell">11/23/14</div>
+                      <div class="content__table-cell">45Mb</div>
                     </div>
                   </div>
                 </div>
@@ -210,146 +226,195 @@
             </div>
             <!--Section block END-->
           </section>
-          <!--Content section END-->
-          <!--Calendar section BEGIN-->
+          <!-- END Content section-->
+          <!--BEGIN Calendar section-->
           <section class="section calendar">
-            <!--Section meta BEGIN-->
-            <div class="section__meta-top">
-              <div class="btn icon section__trigger"> <span class="icon__arrow-down-gray"></span> </div>
-              <h1 class="section__heading">Calendar</h1> <button class="btn section__btn">Edit</button> </div>
-            <!--Section meta END-->
-            <!--Section block BEGIN-->
+            <!--BEGIN - Section topbar-->
+            <div class="section__topbar">
+              <div class="icon section__trigger"> <span class="icon__arrow-down-gray"></span> </div>
+              <h1 class="section__title">Calendar</h1> <button class="btn section__btn">Edit</button> </div>
+            <!--END - Section topbar-->
+            <!--BEGIN - Section block-->
             <div class="section__block">
               <div class="section__content">
-                <div class="section__nodata">There are currently no items in the calendar portlet.</div>
+                <p class="section__nodata">There are currently no items in the calendar portlet.</p>
               </div>
             </div>
-            <!--Section block END-->
+            <!--END - Section block-->
           </section>
-          <!--Calendar section END-->
+          <!--END Calendar section-->
         </main>
-        <!--MAIN END-->
+        <!--END MAIN-->
         <!--ASIDE BEGIN-->
         <aside class="page__aside">
-          <!--Shortcuts section BEGIN-->
+          <!--BEGIN Shortcuts section-->
           <section class="section shortcuts">
-            <!--Section meta BEGIN-->
-            <div class="section__meta-top">
-              <div class="btn icon section__trigger"><span class="icon__arrow-down-gray"></span></div>
-              <h1 class="section__heading">Shortcuts</h1> <button class="btn section__btn">Edit</button> </div>
-            <!--Section meta END-->
-            <!--Section block BEGIN-->
+            <!--BEGIN - Section topbar-->
+            <div class="section__topbar">
+              <div class="icon section__trigger"> <span class="icon__arrow-down-gray"></span> </div>
+              <h1 class="section__title">Shortcuts</h1> <button class="btn section__btn">Edit</button> </div>
+            <!--END - Section topbar-->
+            <!--BEGIN - Section block-->
             <div class="section__block">
               <div class="section__content">
-                <div class="section__nodata">There are currently no items in the shortcuts portlet.</div>
+                <p class="section__nodata">There are currently no items in the calendar portlet.</p>
               </div>
             </div>
-            <!--Section block END-->
+            <!--END - Section block-->
           </section>
-          <!--Shortcuts section END-->
-          <!--Membership section BEGIN-->
+          <!--END Shortcuts section-->
+          <!--BEGIN Membership section-->
           <section class="section membership">
-            <!--Section meta BEGIN-->
-            <div class="section__meta-top">
-              <div class="btn icon section__trigger"><span class="icon__arrow-down-gray"></span></div>
-              <h1 class="section__heading">Membership</h1> <button class="btn section__btn">Edit</button> </div>
-            <!--Section meta END-->
-            <!--Section block BEGIN-->
+            <!--BEGIN - Section meta-->
+            <div class="section__topbar">
+              <div class="icon section__trigger"> <span class="icon__arrow-down-gray"></span> </div>
+              <h1 class="section__title">Membership</h1> <button class="btn section__btn">Edit</button> </div>
+            <!--END - Section meta-->
+            <!--BEGIN - Section block-->
             <div class="section__block">
-              <!--       Section sort BEGIN-->
-              <div class="section__sort"> <a href="#!" class="link" data-letter="a">a</a> <a href="#!" class="link" data-letter="b">b</a> <a href="#!" class="link" data-letter="c">c</a> <a href="#!" class="link" data-letter="d">d</a> <a href="#!" class="link" data-letter="e">e</a>                <a href="#!" class="link" data-letter="f">f</a> <a href="#!" class="link" data-letter="g">g</a> <a href="#!" class="link" data-letter="h">h</a> <a href="#!" class="link" data-letter="i">i</a> <a href="#!" class="link" data-letter="j">j</a>                <a href="#!" class="link" data-letter="k">k</a> <a href="#!" class="link" data-letter="l">l</a> <a href="#!" class="link" data-letter="m">m</a> <a href="#!" class="link" data-letter="n">n</a> <a href="#!" class="link" data-letter="o">o</a>                <a href="#!" class="link" data-letter="p">p</a> <a href="#!" class="link" data-letter="q">q</a> <a href="#!" class="link" data-letter="r">r</a> <a href="#!" class="link" data-letter="s">s</a> <a href="#!" class="link" data-letter="t">t</a>                <a href="#!" class="link" data-letter="u">u</a> <a href="#!" class="link" data-letter="v">v</a> <a href="#!" class="link" data-letter="w">w</a> <a href="#!" class="link" data-letter="x">x</a> <a href="#!" class="link" data-letter="y">y</a>                <a href="#!" class="link" data-letter="z">z</a> <a href="#!" class="link" data-letter="0-9">0-9</a> <a href="#!" class="link" data-letter="all">all</a> </div>
-              <!--       Section sort END-->
-              <!--       Section navigation BEGIN-->
+              <!--BEGIN - Membership sort-->
+              <div class="membership__sort"> <a href="#!" class="link membership__link" data-letter="a">a</a> <a href="#!" class="link membership__link" data-letter="b">b</a> <a href="#!" class="link membership__link" data-letter="c">c</a>
+                <a href="#!" class="link membership__link"
+                  data-letter="d">d</a> <a href="#!" class="link membership__link" data-letter="e">e</a> <a href="#!" class="link membership__link" data-letter="f">f</a> <a href="#!" class="link membership__link" data-letter="g">g</a>
+                  <a href="#!" class="link membership__link"
+                    data-letter="h">h</a> <a href="#!" class="link membership__link" data-letter="i">i</a> <a href="#!" class="link membership__link" data-letter="j">j</a> <a href="#!" class="link membership__link" data-letter="k">k</a>
+                    <a href="#!" class="link membership__link"
+                      data-letter="l">l</a> <a href="#!" class="link membership__link" data-letter="m">m</a> <a href="#!" class="link membership__link" data-letter="n">n</a> <a href="#!" class="link membership__link" data-letter="o">o</a>
+                      <a href="#!" class="link membership__link"
+                        data-letter="p">p</a> <a href="#!" class="link membership__link" data-letter="q">q</a> <a href="#!" class="link membership__link" data-letter="r">r</a> <a href="#!" class="link membership__link" data-letter="s">s</a>
+                        <a href="#!" class="link membership__link"
+                          data-letter="t">t</a> <a href="#!" class="link membership__link" data-letter="u">u</a> <a href="#!" class="link membership__link" data-letter="v">v</a> <a href="#!" class="link membership__link" data-letter="w">w</a>
+                          <a href="#!" class="link membership__link"
+                            data-letter="x">x</a> <a href="#!" class="link membership__link" data-letter="y">y</a> <a href="#!" class="link membership__link" data-letter="z">z</a> <a href="#!" class="link membership__link" data-letter="0-9">0-9</a>
+                            <a href="#!" class="link membership__link"
+                              data-letter="all">all</a>
+              </div>
+              <!--END - Membership sort-->
+              <!-- BEGIN - Section navigation-->
               <div class="section__nav">
-                <div class="section__item"> <span class="label">View</span> <select class="select">
+                <div class="section__nav-item membership__nav-item"> <span class="label section__label">View</span> <select class="select-simple">
                 <option value="0">1-8 of 14</option>
                 <option value="1">9-14 of 14</option>
             </select> </div>
-                <div class="section__icons">
-                  <div class="btn icon"><span class="icon__arrow-left"></span></div>
-                  <div class="btn icon"><span class="icon__arrow-right"></span></div>
+                <div class="section__icons membership__icons">
+                  <div class="icon section__icon membership__icon"> <span class="icon__arrow-left"></span> </div>
+                  <div class="icon section__icon membership__icon"> <span class="icon__arrow-right"></span> </div>
                 </div>
               </div>
-              <!--       Section navigation END-->
-              <!--       Section content BEGIN-->
-              <div class="section__content">
-                <ul class="users">
-                  <li class="user" data-name="David Dhawan">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">David Dhawan</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">DS</span> </li>
-                  <li class="user" data-name="John Davidson">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">John Davidson</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Christian Miller">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">Christian Miller</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="John Davidson">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">John Davidson</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Roy Richardson">
-                    <div class="icon"><span class="icon__user-off"></span></div> <span class="user__name"><a href="#!" class="link">Roy Richardson</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Joe Rod">
-                    <div class="icon"><span class="icon__user-off"></span></div> <span class="user__name"><a href="#!" class="link">Joe Rod</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Jenny Watson">
-                    <div class="icon"><span class="icon__user-off"></span></div> <span class="user__name"><a href="#!" class="link">Jenny Watson</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Mary Monro">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">Mary Monro</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Daniel Fill">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">Daniel Fill</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Angela Grant">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">Angela Grant</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                  <li class="user" data-name="Frederick Mayor">
-                    <div class="icon"><span class="icon__user-on"></span></div> <span class="user__name"><a href="#!" class="link">Frederick Mayor</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">DS</span> </li>
-                  <li class="user" data-name="Emma Clarks">
-                    <div class="icon"><span class="icon__user-off"></span></div> <span class="user__name"><a href="#!" class="link">Emma Clarks</a></span>
-                    <div class="icon user__contact"><span class="icon__Mail"></span></div> <span class="user__info">CPX</span> </li>
-                </ul>
-              </div>
-              <!--       Section content BEGIN-->
+              <!-- END - Section navigation-->
+              <!--BEGIN - Membership users-->
+              <ul class="membership__users">
+                <li class="membership__user" data-name="David Dhawan">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">David Dhawan</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">DS</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="John Davidson">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">John Davidson</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Christian Miller">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Christian Miller</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="John Davidson">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">John Davidson</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Roy Richardson">
+                  <div class="icon membership__icon_user"> <span class="icon__user-off"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Roy Richardson</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Joe Rod">
+                  <div class="icon membership__icon_user"> <span class="icon__user-off"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Joe Rod</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Jenny Watson">
+                  <div class="icon membership__icon_user"> <span class="icon__user-off"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Jenny Watson</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Mary Monro">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Mary Monro</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Daniel Fill">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Daniel Fill</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Angela Grant">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Angela Grant</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Frederick Mayor">
+                  <div class="icon membership__icon_user"> <span class="icon__user-on"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Frederick Mayor</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">DS</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+                <li class="membership__user" data-name="Emma Clarks">
+                  <div class="icon membership__icon_user"> <span class="icon__user-off"></span> </div>
+                  <div class="membership__user-name"> <a href="#!" class="link">Emma Clarks</a> </div>
+                  <div class="membership__user-info"> <span class="membership__user-txt">CPX</span> </div>
+                  <div class="icon membership__user-contact"> <span class="icon__mail"></span> </div>
+                </li>
+              </ul>
+              <!--END - Membership users-->
             </div>
-            <!--Section block END-->
+            <!--END - Section block-->
           </section>
-          <!--Membership section END-->
+          <!--END Membership section-->
         </aside>
         <!--ASIDE END-->
       </div>
-      <!--Page wrapper END-->
-      <!--FOOTER BEGIN-->
+      <!--END PAGE-->
+      <!--BEGIN FOOTER-->
       <footer class="footer">
         <!--   Footer navigation BEGIN-->
-        <nav class="footer__btm-nav">
+        <nav class="footer__nav">
           <div class="footer__block">
-            <div class="item"><a href="#!">Users and Groups</a></div>
-            <div class="item"><a href="#!">Help</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">Users and Groups</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">Help</a></div>
           </div>
           <div class="footer__block">
-            <div class="item"><a href="#!">About DocuShare</a></div>
-            <div class="item"><a href="#!">Statistics</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">About DocuShare</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">Statistics</a></div>
           </div>
           <div class="footer__block">
-            <div class="item"><a href="#!">Mobile Client Settings</a></div>
-            <div class="item"><a href="#!">Cookies</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">Mobile Client Settings</a></div>
+            <div class="footer__item"><a href="#!" class="footer__link">Cookies</a></div>
           </div>
         </nav>
         <!--   Footer navigation END-->
         <!--   Footer copyright BEGIN-->
         <div class="footer__info">
           <div class="footer__copyright">
-            <p>© 1996-2015 Xerox Corporation.</p>
-            <p>All Rights Reserved.</p>
+            <p class="footer__text">© 1996-2015 Xerox Corporation.</p>
+            <p class="footer__text">All Rights Reserved.</p>
           </div>
           <a href="#!" class="footer__logo"><img src="img/footer-logo.png" alt="Xerox"></a>
         </div>
         <!--   Footer copyright END-->
       </footer>
-      <!--FOOTER END-->
+      <!--END FOOTER-->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

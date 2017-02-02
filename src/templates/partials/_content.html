@@ -1,74 +1,82 @@
 {% import "data/content.html" as data %}
-
 <section class="section content is-active">
-    <!--Section meta BEGIN-->
-    <div class="section__meta-top">
-      <div class="btn icon section__trigger">
-       <span class="icon__arrow-down-gray">
-       </span>
+    <!-- BEGIN - Section meta-->
+    <div class="section__topbar">
+        <div class="icon section__trigger">
+            <span class="icon__arrow-down-gray"></span>
         </div>
-        <h1 class="section__heading">Content</h1>
+        <h3 class="section__title">Content</h3>
         <button class="btn section__btn">Edit</button>
     </div>
-    <!--Section meta END-->
+    <!--END - Section meta-->
     
-    <!--Section block BEGIN-->
+    <!-- BEGIN - Section block-->
     <div class="section__block">
-<!-- Section navigation BEGIN-->
+        <!--BEGIN - Section navigation-->
         <div class="section__nav">
-          <div class="section__item">
-           <span class="label">Show</span>
-            <select class="select">
+          <div class="section__nav-item">
+           <span class="label section__label">Show</span>
+            <select class="select-simple">
                 <option value="0">All Types</option>
                 <option value="1">Type 1</option>
                 <option value="2">Type 2</option>
             </select>
             </div> 
-            <div class="section__item">
-            <span class="label">Add</span>
-            <select class="select" id="calendar">
+            <div class="section__nav-item">
+            <span class="label section__label">Add</span>
+            <select class="select-simple" id="calendar">
                 <option value="0">Calendar</option>
                 <option value="1">Calendar</option>
                 <option value="2">Calendar</option>
             </select>
             </div>
-            <div class="section__icons"> 
-                <div class="icon"><span class="icon__rect-white"></span></div>
-                <div class="icon"><span class="icon__lines-white"></span></div>
+            <div class="section__icons content__icons"> 
+                <div class="icon section__icon content__icon">
+                    <span class="icon__rect-white"></span>
+                </div>
+                <div class="icon section__icon content__icon">
+                    <span class="icon__lines-white"></span>
+                </div>
             </div>
         </div>
-<!-- Section navigation END-->
+        <!--END - Section navigation-->
        
 <!--    Section content table BEGIN-->
-        <div class="section__table" data-style="">
-            <div class="head">
-                <div class="col-left">
-                    <div class="head__elem">Title<span class="icon arrow-down"></span></div>
+        <div class="content__table" data-style="">
+            <div class="content__table-head">
+                <div class="content__table-col_left">
+                    <div class="content__head-elem">
+                        <div class="content__head-elem_title">Title </div>
+                        <div class="icon content__icon_head-elem">
+                            <span class="icon__arrow-down-gray"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-right">
-                    <div class="head__elem owner">Owner</div>
-                    <div class="head__elem edited">Edited</div>
-                    <div class="head__elem size">Size</div>
+                <div class="content__table-col_right">
+                    <div class="content__head-elem">Owner</div>
+                    <div class="content__head-elem">Edited</div>
+                    <div class="content__head-elem">Size</div>
                 </div>
             </div> 
-            <div class="body">
-               {% for item in data.content_table %}
-                <div class="row">
-                    <div class="col-left">
-                        <div class="cell icon">
+            <div class="content__table-body">
+            {% for item in data.content_table %}
+                <div class="content__table-row">
+                    <div class="content__table-col_left">
+                        <div class="icon content__table-cell content__table-cell_icon">
                             <span class="icon__folder-single"></span>
                         </div>
-                        <div class="cell cell-heading"> <a href="#!" class="title">{{item.title}}</a>
-                            <p class="text">{{item.text}}</p>
+                        <div class="content__table-cell content__table-cell_heading"> 
+                           <a href="#!" class="link content__link_table-cell">{{item.title}}</a>
+                            <p class="content__text_table-cell">{{item.text}}</p>
                         </div>
                     </div>
-                    <div class="col-right"> 
-                       <a href="#!" class="cell cell-owner">{{item.owner}}</a>
-                        <div class="cell cell-date">{{item.date}}</div>
-                        <div class="cell cell-size">{{item.size}}</div>
+                    <div class="content__table-col_right"> 
+                       <a href="#!" class="link content__table-cell">{{item.owner}}</a>
+                        <div class="content__table-cell">{{item.date}}</div>
+                        <div class="content__table-cell">{{item.size}}</div>
                     </div>
                 </div> 
-                {% endfor %} 
+            {% endfor %} 
             </div>
         </div>
 <!--    Section table END-->

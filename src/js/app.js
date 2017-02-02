@@ -11,7 +11,7 @@ sayHello();
 tabMenu();
 tabContent();
 slideBlock();
-createSpinner('.select');
+createSpinner('.select-simple');
 hover();
 selectNames(8); 
 });

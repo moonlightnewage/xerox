@@ -1,7 +1,7 @@
 export default function selectNames(step) {
     var letters = $('a[data-letter]')
-        , users = document.querySelectorAll('li.user')
-        , options = document.querySelectorAll('.membership .multiple-select__list li')
+        , users = document.querySelectorAll('li.membership__user')
+        , options = document.querySelectorAll('.membership .select__list li')
         , step, arrowLeft = $('.membership .icon__arrow-left')
         , arrowRight = $('.membership .icon__arrow-right');
     // Showing step number of users
@@ -34,11 +34,11 @@ export default function selectNames(step) {
     $(letters).on('click', function (e) {
         e.stopPropagation();
         var target = $(e.target);
-        $('li.user').hide();
-        $('li.user').filter('[data-name^="' + $(target).html().toUpperCase() + '"]').show().siblings().not('.user[data-name^="' + $(target).html().toUpperCase() + '"]').hide();
+        $('li.membership__user').hide();
+        $('li.membership__user').filter('[data-name^="' + $(target).html().toUpperCase() + '"]').show().siblings().not('.membership__user[data-name^="' + $(target).html().toUpperCase() + '"]').hide();
     });
     $('a[data-letter]').last().on('click', function () {
-        $('li.user').show();
+        $('li.membership__user').show();
     });
     
     // Clicker for arrows
